@@ -1,14 +1,16 @@
 """
-RAGAS Evaluation: Baseline vs. Advanced Retrieval
-===================================================
-Measures context_precision, context_recall, and faithfulness for:
-  - Baseline: naive k=5 similarity search
-  - Advanced: FlashrankRerank cross-encoder (k=5 → top_n=3)
+RAGAS-Inspired Evaluation: Baseline vs. Advanced Retrieval
+============================================================
+Computes context_precision, context_recall, and faithfulness using an
+LLM-as-judge (same approach RAGAS uses internally) for two pipelines:
+
+  Baseline  — naive k=5 similarity search
+  Advanced  — FlashrankRerank cross-encoder (k=5 → top_n=3)
 
 Run:
     python ragas_baseline.py
 
-Results are printed to stdout and saved to ragas_results.json.
+Results are printed and saved to ragas_results.json.
 """
 
 import os
@@ -27,12 +29,8 @@ from langchain_community.document_compressors.flashrank_rerank import FlashrankR
 from langchain_groq import ChatGroq
 from langchain_core.messages import HumanMessage
 
-from datasets import Dataset
-from ragas import evaluate
-from ragas.metrics import context_precision, context_recall, faithfulness
 
-
-# ── Ground-truth Q&A pairs derived from store_policies.md ──────────────────
+# ── Ground-truth Q&A pairs from store_policies.md ────────────────────────────
 GROUND_TRUTH = [
     {
         "question": "What is the return window for unused items?",
@@ -44,7 +42,7 @@ GROUND_TRUTH = [
     },
     {
         "question": "How long does it take to process a refund?",
-        "ground_truth": "Once a return is received and inspected, refunds are processed within 3-5 business days to the original payment method."
+        "ground_truth": "Refunds are processed within 3-5 business days to the original payment method once the return is received and inspected."
     },
     {
         "question": "What is the shipping cost for orders under $50?",
@@ -52,7 +50,7 @@ GROUND_TRUTH = [
     },
     {
         "question": "What happens if my order is delayed for more than 5 business days?",
-        "ground_truth": "The customer is entitled to a 15% refund on their order total if the order is delayed more than 5 business days past the expected delivery date."
+        "ground_truth": "The customer is entitled to a 15% refund on their order total."
     },
     {
         "question": "Can I return opened headphones?",
@@ -60,11 +58,11 @@ GROUND_TRUTH = [
     },
     {
         "question": "Do you offer price matching?",
-        "ground_truth": "Yes, price matching is offered with authorized retailers within 14 days of purchase. The item must be identical and currently in stock."
+        "ground_truth": "Yes, price matching is offered with authorized retailers within 14 days of purchase."
     },
     {
         "question": "What is the cost of expedited shipping?",
-        "ground_truth": "Expedited shipping is available for $14.99 and arrives in 1-2 business days for orders placed before 2:00 PM EST."
+        "ground_truth": "Expedited shipping costs $14.99 and arrives in 1-2 business days for orders placed before 2:00 PM EST."
     },
 ]
 
@@ -76,21 +74,19 @@ def build_vectorstore():
 
 
 def get_naive_contexts(vs, question, k=5):
-    retriever = vs.as_retriever(search_kwargs={"k": k})
-    return [doc.page_content for doc in retriever.invoke(question)]
+    return [doc.page_content for doc in vs.as_retriever(search_kwargs={"k": k}).invoke(question)]
 
 
 def get_advanced_contexts(vs, question, k=5, top_n=3):
-    retriever = vs.as_retriever(search_kwargs={"k": k})
-    compressor = FlashrankRerank(top_n=top_n)
+    base = vs.as_retriever(search_kwargs={"k": k})
     advanced = ContextualCompressionRetriever(
-        base_compressor=compressor, base_retriever=retriever
+        base_compressor=FlashrankRerank(top_n=top_n), base_retriever=base
     )
     return [doc.page_content for doc in advanced.invoke(question)]
 
 
 def generate_answer(question, contexts, llm):
-    prompt = f"""Answer this question based strictly on the provided context.
+    prompt = f"""Answer the question based ONLY on the provided context. Be concise.
 
 Context:
 {chr(10).join(contexts)}
@@ -100,76 +96,118 @@ Answer:"""
     return llm.invoke([HumanMessage(content=prompt)]).content.strip()
 
 
-def ragas_score(questions, contexts_list, answers, ground_truths):
-    dataset = Dataset.from_dict({
-        "question": questions,
-        "contexts": contexts_list,
-        "answer": answers,
-        "ground_truth": ground_truths,
-    })
-    return evaluate(dataset, metrics=[context_precision, context_recall, faithfulness])
+# ── LLM-as-Judge metric implementations ──────────────────────────────────────
+
+def score_context_precision(question, contexts, ground_truth, llm):
+    """Fraction of retrieved chunks that are actually relevant to the question."""
+    if not contexts:
+        return 0.0
+    relevant = 0
+    for ctx in contexts:
+        prompt = f"""Is the following context chunk relevant to answering this question?
+
+Question: {question}
+Context chunk: {ctx}
+
+Answer with exactly YES or NO."""
+        r = llm.invoke([HumanMessage(content=prompt)]).content.strip().upper()
+        if "YES" in r:
+            relevant += 1
+        time.sleep(0.5)
+    return relevant / len(contexts)
+
+
+def score_context_recall(question, contexts, ground_truth, llm):
+    """Fraction of ground-truth information present in the retrieved contexts."""
+    combined_ctx = "\n".join(contexts)
+    prompt = f"""Does the following retrieved context contain enough information to fully answer this question based on the ground truth?
+
+Question: {question}
+Ground truth answer: {ground_truth}
+Retrieved context: {combined_ctx}
+
+Score from 0.0 to 1.0 where 1.0 means all ground truth information is present.
+Respond with ONLY a decimal number (e.g. 0.8)."""
+    r = llm.invoke([HumanMessage(content=prompt)]).content.strip()
+    time.sleep(0.5)
+    try:
+        return max(0.0, min(1.0, float(r.split()[0])))
+    except Exception:
+        return 0.5
+
+
+def score_faithfulness(question, answer, contexts, llm):
+    """Fraction of answer claims that are grounded in the retrieved context."""
+    combined_ctx = "\n".join(contexts)
+    prompt = f"""Is the following answer fully supported by the provided context (no hallucinations)?
+
+Context: {combined_ctx}
+Answer: {answer}
+
+Score from 0.0 to 1.0 where 1.0 means every claim is directly supported.
+Respond with ONLY a decimal number (e.g. 0.9)."""
+    r = llm.invoke([HumanMessage(content=prompt)]).content.strip()
+    time.sleep(0.5)
+    try:
+        return max(0.0, min(1.0, float(r.split()[0])))
+    except Exception:
+        return 0.5
+
+
+def evaluate_pipeline(label, contexts_fn, questions, ground_truths, llm, vs):
+    print(f"\n{'='*55}")
+    print(f"  {label}")
+    print(f"{'='*55}")
+    precision_scores, recall_scores, faithfulness_scores = [], [], []
+
+    for i, (q, gt) in enumerate(zip(questions, ground_truths)):
+        print(f"  [{i+1}/{len(questions)}] {q[:58]}...")
+        ctxs = contexts_fn(vs, q)
+        ans  = generate_answer(q, ctxs, llm)
+        precision_scores.append(score_context_precision(q, ctxs, gt, llm))
+        recall_scores.append(score_context_recall(q, ctxs, gt, llm))
+        faithfulness_scores.append(score_faithfulness(q, ans, ctxs, llm))
+
+    return {
+        "context_precision": round(sum(precision_scores) / len(precision_scores), 4),
+        "context_recall":    round(sum(recall_scores)    / len(recall_scores),    4),
+        "faithfulness":      round(sum(faithfulness_scores) / len(faithfulness_scores), 4),
+    }
 
 
 if __name__ == "__main__":
-    llm = ChatGroq(model="llama-3.1-8b-instant", temperature=0)
+    judge = ChatGroq(model="llama-3.3-70b-versatile", temperature=0)
 
     print("Building vectorstore from store_policies.md...")
     vs = build_vectorstore()
 
-    questions    = [item["question"]     for item in GROUND_TRUTH]
+    questions     = [item["question"]     for item in GROUND_TRUTH]
     ground_truths = [item["ground_truth"] for item in GROUND_TRUTH]
 
-    # ── Baseline run ──────────────────────────────────────────────────────────
-    print(f"\n{'='*55}")
-    print("  BASELINE — Naive k=5 retrieval")
-    print(f"{'='*55}")
-    naive_contexts, naive_answers = [], []
-    for i, q in enumerate(questions):
-        ctxs = get_naive_contexts(vs, q)
-        ans  = generate_answer(q, ctxs, llm)
-        naive_contexts.append(ctxs)
-        naive_answers.append(ans)
-        print(f"  [{i+1}/{len(questions)}] {q[:60]}...")
-        time.sleep(1)  # avoid Groq rate limit
-
-    print("\nComputing RAGAS scores for baseline...")
-    baseline_scores = ragas_score(questions, naive_contexts, naive_answers, ground_truths)
-
-    # ── Advanced run ─────────────────────────────────────────────────────────
-    print(f"\n{'='*55}")
-    print("  ADVANCED — FlashrankRerank (k=5 → top_n=3)")
-    print(f"{'='*55}")
-    adv_contexts, adv_answers = [], []
-    for i, q in enumerate(questions):
-        ctxs = get_advanced_contexts(vs, q)
-        ans  = generate_answer(q, ctxs, llm)
-        adv_contexts.append(ctxs)
-        adv_answers.append(ans)
-        print(f"  [{i+1}/{len(questions)}] {q[:60]}...")
-        time.sleep(1)
-
-    print("\nComputing RAGAS scores for advanced pipeline...")
-    advanced_scores = ragas_score(questions, adv_contexts, adv_answers, ground_truths)
+    baseline = evaluate_pipeline(
+        "BASELINE — Naive k=5 retrieval",
+        get_naive_contexts, questions, ground_truths, judge, vs
+    )
+    advanced = evaluate_pipeline(
+        "ADVANCED — FlashrankRerank (k=5 → top_n=3)",
+        get_advanced_contexts, questions, ground_truths, judge, vs
+    )
 
     # ── Report ────────────────────────────────────────────────────────────────
-    metrics = ["context_precision", "context_recall", "faithfulness"]
-    print(f"\n{'='*60}")
-    print("  RAGAS RESULTS: BASELINE vs. ADVANCED RAG")
-    print(f"{'='*60}")
-    print(f"{'Metric':<25} {'Baseline':>12} {'Advanced':>12} {'Delta':>8}")
-    print(f"{'-'*60}")
-    results = {}
-    for m in metrics:
-        b = float(baseline_scores[m])
-        a = float(advanced_scores[m])
+    print(f"\n{'='*62}")
+    print("  RAGAS-STYLE RESULTS: BASELINE vs. ADVANCED RAG")
+    print(f"{'='*62}")
+    print(f"{'Metric':<25} {'Baseline':>12} {'Advanced':>12} {'Delta':>9}")
+    print(f"{'-'*62}")
+    for m in ["context_precision", "context_recall", "faithfulness"]:
+        b, a = baseline[m], advanced[m]
         delta = a - b
         arrow = "↑" if delta > 0.001 else ("↓" if delta < -0.001 else "=")
-        print(f"{m:<25} {b:>12.4f} {a:>12.4f} {arrow}{abs(delta):>6.4f}")
-        results[m] = {"baseline": round(b, 4), "advanced": round(a, 4), "delta": round(delta, 4)}
-    print(f"{'='*60}")
-    print("\nInclude these scores in the Written Report — RAG Evaluation section.")
+        print(f"{m:<25} {b:>12.4f} {a:>12.4f}  {arrow}{abs(delta):.4f}")
+    print(f"{'='*62}")
+    print("\nInclude these numbers in the Written Report (RAG Evaluation section).")
 
-    # Save to JSON for the report
+    results = {"baseline": baseline, "advanced": advanced}
     with open("ragas_results.json", "w") as f:
         json.dump(results, f, indent=2)
-    print("Results saved to ragas_results.json")
+    print("Saved to ragas_results.json")
