@@ -37,7 +37,7 @@ policy_docs = loader.load()
 # Source 2: Flipkart product catalog (product knowledge base, top 200 rows)
 catalog_docs = []
 try:
-    df = pd.read_csv("flipkart_catalog.csv").head(200)
+    df = pd.read_csv("flipkart_catalog.csv", encoding="latin-1").head(200)
     for _, row in df.iterrows():
         name = str(row.get("Name", "Unknown"))
         details = str(row.get("Details", ""))[:400]
