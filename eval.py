@@ -28,7 +28,7 @@ print("-" * 50)
 # 2. FETCH EVALUATION DATA INVENTORY
 # ==========================================
 try:
-    df_happy = pd.read_csv("evaluation_happy_paths.csv", encoding="utf-8", errors="replace").head(30)
+    df_happy = pd.read_csv("evaluation_happy_paths.csv", encoding="latin-1").head(30)
     happy_cases = df_happy['instruction'].tolist()
 except FileNotFoundError:
     print("Warning: evaluation_happy_paths.csv missing. Skipping.")
