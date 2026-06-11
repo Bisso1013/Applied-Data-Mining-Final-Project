@@ -23,7 +23,7 @@ from langgraph.checkpoint.sqlite import SqliteSaver
 
 load_dotenv()
 
-llm = ChatGroq(model="llama-3.1-8b-instant", temperature=0)
+llm = ChatGroq(model="llama-3.3-70b-versatile", temperature=0)
 
 
 # ==========================================
@@ -125,7 +125,9 @@ def policy_rag_agent(state: AgentState):
     retrieved_docs = rerank(user_query, retrieved_docs, top_n=3)
     context = "\n".join([doc.page_content for doc in retrieved_docs])
 
-    prompt = f"""You are AuraTech's Policy Agent. Answer the user based strictly on this context:
+    prompt = f"""You are AuraTech's Policy Agent. Answer ONLY using the context below — do not add information not present in it. If the answer is not in the context, say so clearly.
+
+Context:
 {context}
 
 User Query: {user_query}"""
