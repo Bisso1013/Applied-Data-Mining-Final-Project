@@ -87,7 +87,7 @@ source venv/bin/activate
 
 pip install fastapi uvicorn langchain langchain-groq langchain-community \
             langgraph langgraph-checkpoint-sqlite chromadb fastembed \
-            python-dotenv flashrank ragas==0.1.21 datasets pandas numpy
+            python-dotenv flashrank pandas numpy
 ```
 
 ### 3. Configure your API key
@@ -131,7 +131,6 @@ Results are printed to stdout and saved to `ragas_results.json`.
 | `chromadb` | latest | Vector store |
 | `fastembed` | latest | Embedding model (no API key needed) |
 | `flashrank` | latest | Cross-encoder reranking |
-| `ragas` | 0.1.21 | RAG evaluation metrics |
 | `fastapi` + `uvicorn` | latest | Web server |
 | `groq` (via langchain-groq) | latest | LLM: `llama-3.1-8b-instant` |
 

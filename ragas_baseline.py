@@ -24,10 +24,11 @@ os.environ["HF_HUB_DISABLE_SYMLINKS"] = "1"
 from langchain_community.vectorstores import Chroma
 from langchain_community.embeddings import FastEmbedEmbeddings
 from langchain_community.document_loaders import TextLoader
-from langchain.retrievers import ContextualCompressionRetriever
-from langchain_community.document_compressors.flashrank_rerank import FlashrankRerank
+from flashrank import Ranker, RerankRequest
 from langchain_groq import ChatGroq
 from langchain_core.messages import HumanMessage
+
+_ranker = Ranker()
 
 
 # ── Ground-truth Q&A pairs from store_policies.md ────────────────────────────
@@ -78,11 +79,11 @@ def get_naive_contexts(vs, question, k=5):
 
 
 def get_advanced_contexts(vs, question, k=5, top_n=3):
-    base = vs.as_retriever(search_kwargs={"k": k})
-    advanced = ContextualCompressionRetriever(
-        base_compressor=FlashrankRerank(top_n=top_n), base_retriever=base
-    )
-    return [doc.page_content for doc in advanced.invoke(question)]
+    docs = vs.as_retriever(search_kwargs={"k": k}).invoke(question)
+    passages = [{"id": i, "text": doc.page_content} for i, doc in enumerate(docs)]
+    results = _ranker.rerank(RerankRequest(query=question, passages=passages))
+    top_docs = [docs[r["id"]] for r in results[:top_n]]
+    return [doc.page_content for doc in top_docs]
 
 
 def generate_answer(question, contexts, llm):

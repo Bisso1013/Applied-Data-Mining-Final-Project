@@ -16,8 +16,7 @@ from langchain_groq import ChatGroq
 from langchain_community.document_loaders import TextLoader
 from langchain_community.embeddings import FastEmbedEmbeddings
 from langchain_community.vectorstores import Chroma
-from langchain.retrievers import ContextualCompressionRetriever
-from langchain_community.document_compressors.flashrank_rerank import FlashrankRerank
+from flashrank import Ranker, RerankRequest
 from langgraph.graph import StateGraph, START, END
 from langgraph.graph.message import add_messages
 from langgraph.checkpoint.sqlite import SqliteSaver
@@ -59,20 +58,20 @@ vectorstore = Chroma.from_documents(
     embedding=FastEmbedEmbeddings()
 )
 
-# Naive retriever — exposed for RAGAS baseline comparison in ragas_baseline.py
+# Naive retriever — used directly and as base for reranking
 naive_retriever = vectorstore.as_retriever(search_kwargs={"k": 5})
 
-# Advanced retriever: FlashrankRerank cross-encoder reranking (k=5 → top_n=3)
-try:
-    _compressor = FlashrankRerank(top_n=3)
-    advanced_retriever = ContextualCompressionRetriever(
-        base_compressor=_compressor,
-        base_retriever=naive_retriever
-    )
-    print("[RAG] Advanced retriever (FlashrankRerank) initialized.")
-except Exception as e:
-    advanced_retriever = naive_retriever
-    print(f"[RAG] FlashrankRerank failed ({e}), using naive retriever.")
+# FlashrankRerank cross-encoder — initialized once at startup
+_ranker = Ranker()
+
+def rerank(query: str, docs: list, top_n: int = 3) -> list:
+    """Rerank retrieved docs with FlashrankRerank cross-encoder, return top_n."""
+    passages = [{"id": i, "text": doc.page_content} for i, doc in enumerate(docs)]
+    results = _ranker.rerank(RerankRequest(query=query, passages=passages))
+    top_ids = [r["id"] for r in results[:top_n]]
+    return [docs[i] for i in top_ids]
+
+print("[RAG] FlashrankRerank cross-encoder initialized.")
 
 
 # ==========================================
@@ -120,9 +119,10 @@ def order_lookup_agent(state: AgentState):
 
 
 def policy_rag_agent(state: AgentState):
-    """Advanced RAG: retrieves with FlashrankRerank then answers from grounded context."""
+    """Advanced RAG: naive retrieval → FlashrankRerank cross-encoder → grounded answer."""
     user_query = state['messages'][-1].content
-    retrieved_docs = advanced_retriever.invoke(user_query)
+    retrieved_docs = naive_retriever.invoke(user_query)
+    retrieved_docs = rerank(user_query, retrieved_docs, top_n=3)
     context = "\n".join([doc.page_content for doc in retrieved_docs])
 
     prompt = f"""You are AuraTech's Policy Agent. Answer the user based strictly on this context:
