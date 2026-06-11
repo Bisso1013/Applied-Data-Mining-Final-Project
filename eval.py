@@ -14,7 +14,7 @@ from main import app  # Import compiled LangGraph loop
 load_dotenv()
 
 # Using the powerful 70B model as an objective automated evaluator
-judge_llm = ChatGroq(model="llama-3.1-8b-instant", temperature=0)
+judge_llm = ChatGroq(model="llama-3.3-70b-versatile", temperature=0)
 
 latencies = []
 escalation_count = 0
