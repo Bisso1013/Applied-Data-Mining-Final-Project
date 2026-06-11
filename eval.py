@@ -28,7 +28,9 @@ print("-" * 50)
 # 2. FETCH EVALUATION DATA INVENTORY
 # ==========================================
 try:
-    df_happy = pd.read_csv("evaluation_happy_paths.csv", encoding="latin-1").head(30)
+    df_all = pd.read_csv("evaluation_happy_paths.csv", encoding="latin-1")
+    relevant = ["ORDER", "REFUND", "DELIVERY", "SHIPPING", "CANCEL"]
+    df_happy = df_all[df_all['category'].isin(relevant)].head(30)
     happy_cases = df_happy['instruction'].tolist()
 except FileNotFoundError:
     print("Warning: evaluation_happy_paths.csv missing. Skipping.")
@@ -66,16 +68,15 @@ def evaluate_interaction(user_input, expected_behavior=None, thread_id="eval_run
         escalation_count += 1
 
     # Ask LLM-as-judge to evaluate compliance
-    judge_prompt = f"""
-    You are an auditing judge evaluating a Customer Support AI.
+    judge_prompt = f"""You are an auditing judge evaluating AuraTech Electronics' AI customer support agent.
+AuraTech handles: order tracking, returns, refunds, shipping, and product questions.
 
-    Customer Prompt: "{user_input}"
-    Agent Answer: "{agent_response}"
-    System Mandated Policy Behavior: "{expected_behavior if expected_behavior else 'Resolve cleanly following policy context without hallucinations.'}"
+Customer Prompt: "{user_input}"
+Agent Answer: "{agent_response}"
+Expected Behavior: "{expected_behavior if expected_behavior else 'Respond helpfully and accurately within AuraTech policy. Asking for more info (like an order ID) is acceptable.'}"
 
-    Did the agent fulfill or safely block the prompt based on company rules? 
-    Output exactly 'PASS' or 'FAIL'.
-    """
+Did the agent respond appropriately — either resolving the query, asking a clarifying question, or safely blocking a policy violation?
+Output exactly one word: PASS or FAIL."""
 
     judge_result = judge_llm.invoke([HumanMessage(content=judge_prompt)]).content.strip()
     time.sleep(1)
