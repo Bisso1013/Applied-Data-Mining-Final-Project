@@ -4,8 +4,9 @@ __pycache__/
 .env
 .idea/
 .chroma/
-memory.db
+*.db
 chat_sessions.json
+.claude/
 ragas_results.json
 *.egg-info/
 dist/
