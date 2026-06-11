@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AuraTech Support</title>
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #ebebeb;
+      --surface: #ffffff;
+      --sidebar: #e2e2e5;
+      --text: #18181b;
+      --muted: #71717a;
+      --border: rgba(0,0,0,0.07);
+      --accent: #6d28d9;
+      --accent-hover: #5b21b6;
+      --accent-soft: rgba(109,40,217,0.09);
+    }
+
+    /* ── 1. AMBIENT BACKGROUND ── */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(-45deg, #ebebeb, #e8e4f2, #ebebeb, #e4eaf2, #ebebeb);
+      background-size: 400% 400%;
+      animation: gradientDrift 18s ease infinite;
+      height: 100vh;
+      display: flex;
+      overflow: hidden;
+    }
+
+    @keyframes gradientDrift {
+      0%   { background-position: 0% 50%; }
+      50%  { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* ── SIDEBAR ── */
+    .sidebar {
+      width: 64px;
+      background: var(--sidebar);
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 14px 0;
+      gap: 4px;
+      flex-shrink: 0;
+    }
+
+    /* ── 2. LOGO GLOW + PARTICLES ── */
+    .logo-wrap {
+      position: relative;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+    }
+
+    .logo-wrap::before {
+      content: '';
+      position: absolute;
+      inset: -4px;
+      border-radius: 16px;
+      background: radial-gradient(circle at center, rgba(109,40,217,0.55), transparent 70%);
+      animation: logoGlow 3s ease-in-out infinite;
+      z-index: 0;
+      filter: blur(5px);
+    }
+
+    @keyframes logoGlow {
+      0%, 100% { opacity: 0.35; transform: scale(0.88); }
+      50%       { opacity: 0.75; transform: scale(1.12); }
+    }
+
+    .logo {
+      width: 40px;
+      height: 44px;
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .o1 { width: 5px; height: 5px; background: #8b5cf6; animation: orbit 4s linear infinite; }
+    .o2 { width: 4px; height: 4px; background: #a78bfa; animation: orbit 6.5s linear infinite reverse; opacity: 0.8; }
+    .o3 { width: 3px; height: 3px; background: #c4b5fd; animation: orbit 5.2s linear infinite 1.4s; opacity: 0.6; }
+
+    @keyframes orbit {
+      from { transform: rotate(0deg)   translateX(22px) rotate(0deg); }
+      to   { transform: rotate(360deg) translateX(22px) rotate(-360deg); }
+    }
+
+    .sb-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      transition: background 0.12s, color 0.12s;
+    }
+
+    .sb-btn:hover, .sb-btn.active {
+      background: rgba(0,0,0,0.09);
+      color: var(--text);
+    }
+
+    .sb-divider {
+      width: 28px;
+      height: 1px;
+      background: rgba(0,0,0,0.1);
+      margin: 6px 0;
+    }
+
+    .sb-bottom {
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #6d28d9, #a78bfa);
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      letter-spacing: 0.3px;
+    }
+
+    /* ── MAIN ── */
+    .main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* ── WELCOME ── */
+    .welcome {
+      flex: 1;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 72px 24px 0;
+    }
+
+    .welcome-inner { width: 100%; max-width: 720px; }
+
+    .welcome h1 {
+      font-size: 38px;
+      font-weight: 700;
+      line-height: 1.22;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .welcome h1 .gradient {
+      background: linear-gradient(110deg, #6d28d9 10%, #a78bfa 80%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 4s linear infinite;
+    }
+
+    @keyframes shimmer {
+      0%   { background-position: 0% center; }
+      100% { background-position: 200% center; }
+    }
+
+    .welcome-sub {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    /* ── 3. 3D CARD TILT (CSS reset only — tilt driven by JS) ── */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 14px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 105px;
+      user-select: none;
+      will-change: transform;
+    }
+
+    .card p {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text);
+      line-height: 1.45;
+    }
+
+    .card-icon { margin-top: 14px; color: var(--muted); }
+
+    .refresh {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: none;
+      border: none;
+      color: var(--muted);
+      font-size: 13px;
+      cursor: pointer;
+      padding: 4px 2px;
+      margin-bottom: 28px;
+      transition: color 0.12s;
+    }
+
+    .refresh:hover { color: var(--text); }
+
+    /* ── CHAT ── */
+    .chat { display: none; flex: 1; flex-direction: column; overflow: hidden; }
+    .chat.on { display: flex; }
+
+    .messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 32px 24px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .messages-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* ── 4. MESSAGE SLIDE-IN ── */
+    @keyframes msgIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .msg {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      animation: msgIn 0.22s ease forwards;
+    }
+
+    .msg.user { flex-direction: row-reverse; }
+
+    .msg-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .msg.assistant .msg-icon { background: linear-gradient(135deg, #6d28d9, #8b5cf6); color: white; }
+    .msg.user .msg-icon { background: #e4e4e7; color: var(--muted); }
+
+    .msg-body { display: flex; flex-direction: column; gap: 4px; max-width: 68%; }
+
+    .bubble {
+      padding: 11px 15px;
+      border-radius: 16px;
+      font-size: 14px;
+      line-height: 1.6;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    .msg.user .bubble {
+      background: var(--accent);
+      color: white;
+      border-bottom-right-radius: 4px;
+    }
+
+    .msg.assistant .bubble {
+      background: var(--surface);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-bottom-left-radius: 4px;
+    }
+
+    /* ── 5. GUARDRAIL SHAKE + RED FLASH ── */
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      10%  { transform: translateX(-8px); }
+      25%  { transform: translateX(7px); }
+      40%  { transform: translateX(-5px); }
+      55%  { transform: translateX(4px); }
+      70%  { transform: translateX(-2px); }
+      85%  { transform: translateX(2px); }
+    }
+
+    @keyframes redFlash {
+      0%   { border-color: rgba(239,68,68,1);   box-shadow: 0 0 18px rgba(239,68,68,0.45); }
+      100% { border-color: rgba(239,68,68,0.22); box-shadow: 0 0 5px rgba(239,68,68,0.1); }
+    }
+
+    .bubble.guardrail {
+      border: 1.5px solid rgba(239,68,68,1) !important;
+      animation: shake 0.45s ease, redFlash 2s ease forwards;
+    }
+
+    /* ── 6. ESCALATION WARNING ── */
+    @keyframes warningPulse {
+      0%, 100% { box-shadow: 0 0 0 rgba(245,158,11,0); }
+      50%       { box-shadow: 0 0 18px rgba(245,158,11,0.28); }
+    }
+
+    .bubble.escalation {
+      border-left: 3px solid #f59e0b !important;
+      border-radius: 4px 16px 16px 4px !important;
+      background: linear-gradient(to right, rgba(245,158,11,0.05), var(--surface)) !important;
+      animation: warningPulse 2.5s ease-in-out infinite;
+    }
+
+    /* ── NODE BADGE POP ── */
+    @keyframes badgePop {
+      0%   { opacity: 0; transform: scale(0.7) translateY(4px); }
+      70%  { transform: scale(1.08) translateY(-1px); }
+      100% { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    .node-tag {
+      font-size: 11px;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      animation: badgePop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+    }
+
+    .node-tag b {
+      background: var(--accent-soft);
+      color: var(--accent);
+      padding: 2px 8px;
+      border-radius: 20px;
+      font-weight: 500;
+      font-size: 11px;
+    }
+
+    .node-tag.warn b { background: rgba(245,158,11,0.12); color: #b45309; }
+    .node-tag.blocked b { background: rgba(239,68,68,0.1); color: #dc2626; }
+
+    /* ── MESSAGE ACTIONS (copy / edit) ── */
+    .msg-actions {
+      display: flex;
+      gap: 3px;
+      opacity: 0;
+      transition: opacity 0.15s;
+      margin-top: 2px;
+    }
+
+    .msg:hover .msg-actions { opacity: 1; }
+    .msg.user .msg-actions  { justify-content: flex-end; }
+
+    .action-btn {
+      width: 26px;
+      height: 26px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      transition: background 0.12s, color 0.12s, border-color 0.12s;
+      padding: 0;
+    }
+
+    .action-btn:hover {
+      background: var(--accent-soft);
+      color: var(--accent);
+      border-color: rgba(109,40,217,0.2);
+    }
+
+    .action-btn.copied {
+      color: #16a34a;
+      border-color: rgba(22,163,74,0.2);
+      background: rgba(22,163,74,0.08);
+    }
+
+    /* Typing */
+    .typing { display: none; padding: 0 24px 8px; }
+    .typing.on { display: flex; }
+
+    .typing-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .dots {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      border-bottom-left-radius: 4px;
+      padding: 11px 15px;
+      display: flex;
+      gap: 4px;
+      align-items: center;
+    }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--muted);
+      animation: bounce 1.3s infinite;
+    }
+
+    .dot:nth-child(2) { animation-delay: 0.18s; }
+    .dot:nth-child(3) { animation-delay: 0.36s; }
+
+    @keyframes bounce {
+      0%, 60%, 100% { transform: translateY(0); opacity: 0.35; }
+      30% { transform: translateY(-5px); opacity: 1; }
+    }
+
+    /* ── INPUT ── */
+    .input-wrap { padding: 12px 24px 22px; flex-shrink: 0; }
+    .input-wrap-inner { max-width: 720px; margin: 0 auto; }
+
+    .input-box {
+      background: var(--surface);
+      border: 1px solid rgba(0,0,0,0.09);
+      border-radius: 16px;
+      padding: 14px 14px 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .input-box textarea {
+      width: 100%;
+      border: none;
+      outline: none;
+      resize: none;
+      font-size: 14px;
+      color: var(--text);
+      font-family: inherit;
+      background: transparent;
+      min-height: 22px;
+      max-height: 120px;
+      line-height: 1.5;
+    }
+
+    .input-box textarea::placeholder { color: var(--muted); }
+
+    .input-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+
+    .input-left { display: flex; gap: 2px; }
+
+    .icon-btn {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      background: none;
+      border: none;
+      color: var(--muted);
+      font-size: 12px;
+      cursor: pointer;
+      padding: 5px 8px;
+      border-radius: 7px;
+      transition: background 0.12s, color 0.12s;
+      font-family: inherit;
+    }
+
+    .icon-btn:hover { background: #f0f0f0; color: var(--text); }
+
+    .input-right { display: flex; align-items: center; gap: 10px; }
+    .char-count { font-size: 12px; color: var(--muted); }
+
+    .send {
+      width: 34px;
+      height: 34px;
+      border-radius: 9px;
+      background: var(--accent);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      transition: background 0.12s, transform 0.1s;
+      flex-shrink: 0;
+    }
+
+    .send:hover:not(:disabled) { background: var(--accent-hover); }
+    .send:active:not(:disabled) { transform: scale(0.94); }
+    .send:disabled { background: #d4d4d8; cursor: not-allowed; }
+
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.15); border-radius: 10px; }
+
+    /* ── HISTORY PANEL ── */
+    .history-panel {
+      width: 0;
+      overflow: hidden;
+      background: #eeecf4;
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      transition: width 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+      flex-shrink: 0;
+    }
+    .history-panel.open { width: 224px; }
+
+    .history-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 14px 12px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+      flex-shrink: 0;
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+    }
+
+    .history-close {
+      width: 24px;
+      height: 24px;
+      border-radius: 6px;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      transition: background 0.12s;
+      padding: 0;
+    }
+    .history-close:hover { background: rgba(0,0,0,0.07); }
+
+    .history-list {
+      flex: 1;
+      overflow-y: auto;
+      padding: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .history-empty {
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+      padding: 28px 12px;
+    }
+
+    .history-item {
+      padding: 9px 8px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      align-items: flex-start;
+      gap: 7px;
+      transition: background 0.12s;
+    }
+    .history-item:hover { background: rgba(0,0,0,0.06); }
+    .history-item.active { background: var(--accent-soft); }
+
+    .history-item-body {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .history-item-title {
+      font-size: 12.5px;
+      font-weight: 500;
+      color: var(--text);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .history-item-time {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .history-item-del {
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      opacity: 0;
+      transition: opacity 0.12s, background 0.12s, color 0.12s;
+      flex-shrink: 0;
+      padding: 0;
+      margin-top: 1px;
+    }
+    .history-item:hover .history-item-del { opacity: 1; }
+    .history-item-del:hover { background: rgba(239,68,68,0.1); color: #dc2626; }
+  </style>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<nav class="sidebar">
+  <div class="logo-wrap">
+    <span class="orb o1"></span>
+    <span class="orb o2"></span>
+    <span class="orb o3"></span>
+    <div class="logo">
+      <svg width="40" height="44" viewBox="0 0 100 108" xmlns="http://www.w3.org/2000/svg">
+        <!-- Thick ring + tail as compound path (evenodd punches hole in center) -->
+        <path fill-rule="evenodd" fill="#7c3aed" d="
+          M50 4
+          C24 4 3 23 3 47
+          C3 71 24 90 50 90
+          C56 90 61.7 89 67 87
+          L84 106
+          L78 84
+          C88 77 97 63.5 97 47
+          C97 23 76 4 50 4Z
+          M50 18
+          A29 29 0 1 0 79 47
+          A29 29 0 0 0 50 18Z
+        "/>
+        <!-- Eyes (inside the transparent ring center) -->
+        <circle cx="37" cy="44" r="5.5" fill="#7c3aed"/>
+        <circle cx="63" cy="44" r="5.5" fill="#7c3aed"/>
+        <!-- Smile -->
+        <path d="M31 57 Q50 72 69 57" stroke="#7c3aed" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+      </svg>
+    </div>
+  </div>
+
+  <button class="sb-btn" title="New chat" onclick="resetChat()">
+    <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+    </svg>
+  </button>
+
+  <button class="sb-btn" id="historyBtn" title="Chat history" onclick="toggleHistory()">
+    <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+    </svg>
+  </button>
+</nav>
+
+<!-- HISTORY PANEL -->
+<div class="history-panel" id="historyPanel">
+  <div class="history-header">
+    <span>Recent Chats</span>
+    <button class="history-close" onclick="closeHistory()">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+  </div>
+  <div class="history-list" id="historyList">
+    <div class="history-empty">No saved chats yet</div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<main class="main">
+
+  <!-- WELCOME -->
+  <div class="welcome" id="welcome">
+    <div class="welcome-inner">
+      <h1>Hi there, <span class="gradient">Customer</span><br>What can we help with?</h1>
+      <p class="welcome-sub">Use one of the common prompts below or type your own to begin</p>
+
+      <div class="cards" id="cards">
+        <div class="card" onclick="fillPrompt('Where is my order? I need to check my delivery status.')">
+          <p>Track an order or check delivery status</p>
+          <div class="card-icon">
+            <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+        </div>
+        <div class="card" onclick="fillPrompt('What is your return and refund policy?')">
+          <p>Return or refund a recent purchase</p>
+          <div class="card-icon">
+            <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+              <polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.51"/>
+            </svg>
+          </div>
+        </div>
+        <div class="card" onclick="fillPrompt('My package says delivered but I haven\'t received it. What should I do?')">
+          <p>Report a missing or damaged package</p>
+          <div class="card-icon">
+            <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+            </svg>
+          </div>
+        </div>
+        <div class="card" onclick="fillPrompt('What are your shipping options and delivery timeframes?')">
+          <p>Ask about shipping costs and timeframes</p>
+          <div class="card-icon">
+            <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+              <rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+              <circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <button class="refresh" onclick="shuffleCards()">
+        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+          <polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.51"/>
+        </svg>
+        Refresh Prompts
+      </button>
+    </div>
+  </div>
+
+  <!-- CHAT -->
+  <div class="chat" id="chat">
+    <div class="messages" id="messagesScroll">
+      <div class="messages-inner" id="messages"></div>
+    </div>
+    <div class="typing" id="typing">
+      <div class="typing-inner">
+        <div class="msg-icon" style="background:linear-gradient(135deg,#6d28d9,#8b5cf6);color:white;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0;">AT</div>
+        <div class="dots">
+          <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INPUT -->
+  <div class="input-wrap">
+    <div class="input-wrap-inner">
+      <div class="input-box">
+        <textarea id="inputField" placeholder="Ask about your order, returns, shipping policy..." rows="1"
+          oninput="onInput(this)" onkeydown="onKeyDown(event)"></textarea>
+        <div class="input-footer">
+          <div class="input-left">
+            <button class="icon-btn" onclick="fillPrompt('I need to look up an order by ID. My order ID is ')">
+              <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+              </svg>
+              Order Lookup
+            </button>
+            <button class="icon-btn" onclick="fillPrompt('I need to escalate my issue to a human agent because ')">
+              <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+              Escalate
+            </button>
+          </div>
+          <div class="input-right">
+            <span class="char-count" id="charCount">0/1000</span>
+            <button class="send" id="sendBtn" onclick="sendMessage()" disabled>
+              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<script>
+  let currentThreadId = 'session_' + Math.random().toString(36).slice(2, 10);
+  let historyOpen = false;
+
+  // ── 3. 3D CARD TILT ──
+  function initCardTilt() {
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        card.style.transition = 'box-shadow 0.08s linear';
+      });
+      card.addEventListener('mousemove', e => {
+        const r = card.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width - 0.5;
+        const y = (e.clientY - r.top) / r.height - 0.5;
+        card.style.transform = `perspective(600px) rotateY(${x * 22}deg) rotateX(${y * -22}deg) scale(1.04)`;
+        card.style.boxShadow = `${-x * 14}px ${-y * 10}px 26px rgba(109,40,217,0.16)`;
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transition = 'transform 0.5s ease, box-shadow 0.5s ease';
+        card.style.transform = '';
+        card.style.boxShadow = '';
+      });
+    });
+  }
+
+  initCardTilt();
+
+  // ── PROMPT DATA ──
+  const allPrompts = [
+    { label: 'Track an order or check delivery status',  text: 'Where is my order? I need to check my delivery status.' },
+    { label: 'Return or refund a recent purchase',       text: 'What is your return and refund policy?' },
+    { label: 'Report a missing or damaged package',      text: "My package says delivered but I haven't received it. What should I do?" },
+    { label: 'Ask about shipping costs and timeframes',  text: 'What are your shipping options and delivery timeframes?' },
+    { label: 'Check if an item is eligible for return',  text: 'Can I return an opened laptop purchased 2 weeks ago?' },
+    { label: 'Get help with a delayed shipment',         text: 'My order has been delayed for over 5 business days. What can I do?' },
+    { label: 'Ask about price matching',                 text: 'Do you offer price matching with other authorized retailers?' },
+    { label: 'Change a delivery address',                text: 'Can I change the shipping address on my order?' },
+  ];
+
+  const cardIcons = [
+    `<svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>`,
+    `<svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.51"/></svg>`,
+    `<svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>`,
+    `<svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>`,
+  ];
+
+  let shownIndices = [0, 1, 2, 3];
+
+  function shuffleCards() {
+    const pool = allPrompts.map((_, i) => i).filter(i => !shownIndices.includes(i));
+    if (pool.length < 4) { shownIndices = [0, 1, 2, 3]; } else {
+      pool.sort(() => Math.random() - 0.5);
+      shownIndices = pool.slice(0, 4);
+    }
+    const cards = document.querySelectorAll('.card');
+    cards.forEach((card, i) => {
+      const p = allPrompts[shownIndices[i]];
+      card.querySelector('p').textContent = p.label;
+      card.onclick = () => fillPrompt(p.text);
+      card.querySelector('.card-icon').innerHTML = cardIcons[i];
+    });
+    initCardTilt();
+  }
+
+  function onInput(el) {
+    el.style.height = 'auto';
+    el.style.height = Math.min(el.scrollHeight, 120) + 'px';
+    const len = el.value.length;
+    document.getElementById('charCount').textContent = len + '/1000';
+    document.getElementById('sendBtn').disabled = len === 0 || len > 1000;
+  }
+
+  function onKeyDown(e) {
+    if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); }
+  }
+
+  function fillPrompt(text) {
+    const el = document.getElementById('inputField');
+    el.value = text;
+    onInput(el);
+    el.focus();
+  }
+
+  function showChat() {
+    document.getElementById('welcome').style.display = 'none';
+    document.getElementById('chat').classList.add('on');
+  }
+
+  function resetChat() {
+    currentThreadId = 'session_' + Math.random().toString(36).slice(2, 10);
+    closeHistory();
+    document.getElementById('welcome').style.display = '';
+    document.getElementById('chat').classList.remove('on');
+    document.getElementById('messages').innerHTML = '';
+    const el = document.getElementById('inputField');
+    el.value = '';
+    el.style.height = 'auto';
+    document.getElementById('charCount').textContent = '0/1000';
+    document.getElementById('sendBtn').disabled = true;
+  }
+
+  // ── 4 + 5 + 6. appendMsg WITH TYPEWRITER, GUARDRAIL SHAKE, ESCALATION WARN ──
+  function appendMsg(role, text, node, skipTypewriter = false) {
+    const wrap = document.getElementById('messages');
+    const scroll = document.getElementById('messagesScroll');
+
+    const msg = document.createElement('div');
+    msg.className = 'msg ' + role;
+
+    const icon = document.createElement('div');
+    icon.className = 'msg-icon';
+    icon.textContent = role === 'user' ? 'You' : 'AT';
+    icon.style.cssText = role === 'user'
+      ? 'background:#e4e4e7;color:#71717a;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0;'
+      : 'background:linear-gradient(135deg,#6d28d9,#8b5cf6);color:white;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0;';
+
+    const body = document.createElement('div');
+    body.className = 'msg-body';
+
+    const bubble = document.createElement('div');
+    const isGuardrail  = node === 'input_guardrail_agent';
+    const isToxicity   = node === 'toxicity_agent';
+    const isPolicyGuard = node === 'policy_guardrail_agent';
+    const isEscalation = node === 'escalation_agent' || isToxicity || isPolicyGuard;
+    bubble.className = 'bubble' + (isGuardrail ? ' guardrail' : '') + (isEscalation ? ' escalation' : '') + (isToxicity || isPolicyGuard ? ' escalation' : '');
+    body.appendChild(bubble);
+
+    // Copy / Edit action buttons
+    const actions = document.createElement('div');
+    actions.className = 'msg-actions';
+
+    const copyBtn = document.createElement('button');
+    copyBtn.className = 'action-btn';
+    copyBtn.title = 'Copy';
+    copyBtn.innerHTML = `<svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>`;
+    copyBtn.onclick = () => {
+      navigator.clipboard.writeText(text);
+      copyBtn.classList.add('copied');
+      copyBtn.innerHTML = `<svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>`;
+      setTimeout(() => {
+        copyBtn.classList.remove('copied');
+        copyBtn.innerHTML = `<svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>`;
+      }, 1800);
+    };
+    actions.appendChild(copyBtn);
+
+    if (role === 'user') {
+      const editBtn = document.createElement('button');
+      editBtn.className = 'action-btn';
+      editBtn.title = 'Edit';
+      editBtn.innerHTML = `<svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>`;
+      editBtn.onclick = () => {
+        const el = document.getElementById('inputField');
+        el.value = text;
+        onInput(el);
+        el.focus();
+      };
+      actions.appendChild(editBtn);
+    }
+
+    body.appendChild(actions);
+
+    msg.appendChild(icon);
+    msg.appendChild(body);
+    wrap.appendChild(msg);
+    scroll.scrollTop = scroll.scrollHeight;
+
+    function addNodeBadge() {
+      if (node && node !== 'system' && node !== 'error') {
+        const tag = document.createElement('div');
+        const tagClass = isGuardrail ? 'blocked' : (isEscalation || isToxicity || isPolicyGuard) ? 'warn' : '';
+        tag.className = 'node-tag' + (tagClass ? ' ' + tagClass : '');
+        const label = node.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+        tag.innerHTML = `<svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg><b>${label}</b>`;
+        body.appendChild(tag);
+      }
+    }
+
+    if (role === 'assistant') {
+      if (skipTypewriter) {
+        bubble.textContent = text;
+        addNodeBadge();
+      } else {
+        // Typewriter — speed scales so short replies feel snappy, long ones don't drag
+        const speed = Math.max(8, Math.min(18, 3000 / text.length));
+        let i = 0;
+        function atBottom() {
+          return scroll.scrollHeight - scroll.scrollTop - scroll.clientHeight < 60;
+        }
+        function type() {
+          if (i < text.length) {
+            bubble.textContent += text[i++];
+            if (atBottom()) scroll.scrollTop = scroll.scrollHeight;
+            setTimeout(type, speed);
+          } else {
+            addNodeBadge();
+          }
+        }
+        type();
+      }
+    } else {
+      bubble.textContent = text;
+    }
+  }
+
+  // ── HISTORY PANEL ──
+  function toggleHistory() {
+    historyOpen ? closeHistory() : openHistory();
+  }
+
+  function openHistory() {
+    loadHistory();
+    document.getElementById('historyPanel').classList.add('open');
+    document.getElementById('historyBtn').classList.add('active');
+    historyOpen = true;
+  }
+
+  function closeHistory() {
+    document.getElementById('historyPanel').classList.remove('open');
+    document.getElementById('historyBtn').classList.remove('active');
+    historyOpen = false;
+  }
+
+  async function loadHistory() {
+    try {
+      const res = await fetch('/chats');
+      const sessions = await res.json();
+      renderHistory(sessions);
+    } catch { }
+  }
+
+  function formatRelTime(isoStr) {
+    const diff = Date.now() - new Date(isoStr).getTime();
+    const m = Math.floor(diff / 60000);
+    if (m < 1) return 'just now';
+    if (m < 60) return m + 'm ago';
+    const h = Math.floor(m / 60);
+    if (h < 24) return h + 'h ago';
+    return Math.floor(h / 24) + 'd ago';
+  }
+
+  function renderHistory(sessions) {
+    const list = document.getElementById('historyList');
+    if (!sessions.length) {
+      list.innerHTML = '<div class="history-empty">No saved chats yet</div>';
+      return;
+    }
+    list.innerHTML = '';
+    sessions.forEach(sess => {
+      const item = document.createElement('div');
+      item.className = 'history-item' + (sess.thread_id === currentThreadId ? ' active' : '');
+
+      const body = document.createElement('div');
+      body.className = 'history-item-body';
+      body.onclick = () => restoreSession(sess);
+
+      const titleEl = document.createElement('div');
+      titleEl.className = 'history-item-title';
+      titleEl.textContent = sess.title;
+
+      const timeEl = document.createElement('div');
+      timeEl.className = 'history-item-time';
+      timeEl.textContent = formatRelTime(sess.updated_at || sess.created_at);
+
+      body.appendChild(titleEl);
+      body.appendChild(timeEl);
+
+      const delBtn = document.createElement('button');
+      delBtn.className = 'history-item-del';
+      delBtn.title = 'Delete chat';
+      delBtn.innerHTML = `<svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>`;
+      delBtn.onclick = e => { e.stopPropagation(); deleteSession(sess.thread_id); };
+
+      item.appendChild(body);
+      item.appendChild(delBtn);
+      list.appendChild(item);
+    });
+  }
+
+  function restoreSession(sess) {
+    currentThreadId = sess.thread_id;
+    closeHistory();
+
+    document.getElementById('welcome').style.display = 'none';
+    document.getElementById('chat').classList.add('on');
+    document.getElementById('messages').innerHTML = '';
+
+    sess.messages.forEach(m => {
+      appendMsg(m.role, m.content, m.node || null, true);
+    });
+
+    const scroll = document.getElementById('messagesScroll');
+    setTimeout(() => { scroll.scrollTop = scroll.scrollHeight; }, 30);
+  }
+
+  async function deleteSession(tid) {
+    await fetch('/chats/' + tid, { method: 'DELETE' });
+    if (tid === currentThreadId) resetChat();
+    else loadHistory();
+  }
+
+  async function sendMessage() {
+    const el = document.getElementById('inputField');
+    const text = el.value.trim();
+    if (!text) return;
+
+    showChat();
+    appendMsg('user', text);
+
+    el.value = '';
+    el.style.height = 'auto';
+    document.getElementById('charCount').textContent = '0/1000';
+    document.getElementById('sendBtn').disabled = true;
+
+    const typing = document.getElementById('typing');
+    typing.classList.add('on');
+    document.getElementById('messagesScroll').scrollTop = 999999;
+
+    try {
+      const res = await fetch('/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: text, thread_id: currentThreadId })
+      });
+      const data = await res.json();
+      typing.classList.remove('on');
+      appendMsg('assistant', data.reply, data.node);
+      if (historyOpen) loadHistory();
+    } catch {
+      typing.classList.remove('on');
+      appendMsg('assistant', 'Sorry, something went wrong. Please try again.');
+    }
+  }
+</script>
+</body>
+</html>

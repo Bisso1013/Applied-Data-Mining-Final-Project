@@ -1,0 +1,5047 @@
+[
+    {
+        "order_id": "55d87f6b-e0bf-4be2-bfa5-8ab357d472b6",
+        "customer_id": "c79337bc-21cb-4181-802c-a3e67cd481f0",
+        "timestamp": "2026-04-17T18:23:37.356065",
+        "status": "in-transit",
+        "total_amount": 439.98,
+        "items": [
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            },
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            }
+        ],
+        "shipping_address": {
+            "street": "981 White Greens Apt. 498",
+            "city": "Solisside",
+            "state": "MD",
+            "zip_code": "97482"
+        }
+    },
+    {
+        "order_id": "b6c656fe-f3ae-4353-8a8a-ed06038fec29",
+        "customer_id": "41082041-e4ab-4c0a-b3a2-2b57cff726ba",
+        "timestamp": "2026-04-23T18:23:37.357604",
+        "status": "cancelled",
+        "total_amount": 594.98,
+        "items": [
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            },
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            },
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            }
+        ],
+        "shipping_address": {
+            "street": "6795 Scott Village",
+            "city": "South Sheliaburgh",
+            "state": "MA",
+            "zip_code": "85020"
+        }
+    },
+    {
+        "order_id": "c349e758-83a1-436b-ae42-81599658acdc",
+        "customer_id": "9dd1f085-2f3d-4b6f-b1e0-867687a93460",
+        "timestamp": "2026-05-27T18:23:37.357604",
+        "status": "delivered",
+        "total_amount": 45.0,
+        "items": [
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            }
+        ],
+        "shipping_address": {
+            "street": "6823 Mary Mountains",
+            "city": "Lake Sandrashire",
+            "state": "WA",
+            "zip_code": "46748"
+        }
+    },
+    {
+        "order_id": "f35741ea-06b1-413e-b8a3-4c189b7b1d24",
+        "customer_id": "b37fd1be-1dd8-407b-8de0-e6d28cb1801b",
+        "timestamp": "2026-05-30T18:23:37.358635",
+        "status": "returned",
+        "total_amount": 209.99,
+        "items": [
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            },
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            }
+        ],
+        "shipping_address": {
+            "street": "64256 Paul Junctions Apt. 308",
+            "city": "Elizabethville",
+            "state": "IA",
+            "zip_code": "62111"
+        }
+    },
+    {
+        "order_id": "25df5273-dc31-4f4b-8ccb-bf33500936b1",
+        "customer_id": "c9bc908c-89e3-43ac-a55d-9ae1a437440a",
+        "timestamp": "2026-06-04T18:23:37.358635",
+        "status": "in-transit",
+        "total_amount": 349.99,
+        "items": [
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            }
+        ],
+        "shipping_address": {
+            "street": "508 Zamora Lake Apt. 745",
+            "city": "Kevinstad",
+            "state": "WI",
+            "zip_code": "88905"
+        }
+    },
+    {
+        "order_id": "07b571fd-f56c-4432-b236-093a8c0cc94c",
+        "customer_id": "91a25c7c-40e8-42aa-8f8d-6c8dd90e9ffd",
+        "timestamp": "2026-05-27T18:23:37.358635",
+        "status": "delayed",
+        "total_amount": 349.99,
+        "items": [
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            }
+        ],
+        "shipping_address": {
+            "street": "70454 Jennifer Ferry",
+            "city": "Obrientown",
+            "state": "CT",
+            "zip_code": "04576"
+        }
+    },
+    {
+        "order_id": "3bdd7e7e-0c6f-4220-8021-8458972cd7fb",
+        "customer_id": "4d439a18-21f9-4b91-ae6e-7ea9dfe31a97",
+        "timestamp": "2026-06-03T18:23:37.359645",
+        "status": "in-transit",
+        "total_amount": 559.98,
+        "items": [
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            },
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            },
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            }
+        ],
+        "shipping_address": {
+            "street": "5114 Katie Ridge Suite 997",
+            "city": "New Anita",
+            "state": "PR",
+            "zip_code": "33068"
+        }
+    },
+    {
+        "order_id": "61272c07-e03a-448f-9920-d40370a3427b",
+        "customer_id": "564fd6a9-cb4f-422c-a6af-61e3ba8d3730",
+        "timestamp": "2026-04-29T18:23:37.359645",
+        "status": "cancelled",
+        "total_amount": 334.98,
+        "items": [
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            },
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            },
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            }
+        ],
+        "shipping_address": {
+            "street": "470 Ryan Lake",
+            "city": "Port Tracibury",
+            "state": "NM",
+            "zip_code": "87394"
+        }
+    },
+    {
+        "order_id": "ad83efeb-e1f1-4d47-b4ba-0806ba74b924",
+        "customer_id": "b5c3f5b2-ded4-4ec3-892e-bac5e993e163",
+        "timestamp": "2026-04-27T18:23:37.359645",
+        "status": "returned",
+        "total_amount": 199.99,
+        "items": [
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            }
+        ],
+        "shipping_address": {
+            "street": "42872 Gray Drive",
+            "city": "New Brooketown",
+            "state": "WI",
+            "zip_code": "19116"
+        }
+    },
+    {
+        "order_id": "4a5e9aae-3472-4a36-99d5-59e55d23f63a",
+        "customer_id": "1f5d0ca0-02ef-4dd8-8f62-223ed5e68302",
+        "timestamp": "2026-05-04T18:23:37.360693",
+        "status": "returned",
+        "total_amount": 469.99,
+        "items": [
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            },
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            }
+        ],
+        "shipping_address": {
+            "street": "5494 Jesus Ville Apt. 104",
+            "city": "Barnesbury",
+            "state": "AZ",
+            "zip_code": "42920"
+        }
+    },
+    {
+        "order_id": "b6c086ee-e122-4371-83fa-5c000fd788ae",
+        "customer_id": "3b39f7ec-5060-4de0-8a64-ddb44935ed11",
+        "timestamp": "2026-04-13T18:23:37.360693",
+        "status": "returned",
+        "total_amount": 209.99,
+        "items": [
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            },
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            }
+        ],
+        "shipping_address": {
+            "street": "00905 Larry Well Apt. 100",
+            "city": "New Scottton",
+            "state": "WV",
+            "zip_code": "42316"
+        }
+    },
+    {
+        "order_id": "6143f309-a416-46f7-bd65-d109d66298e8",
+        "customer_id": "c7c4638a-b30c-4691-977b-5052885710e1",
+        "timestamp": "2026-04-27T18:23:37.360693",
+        "status": "delivered",
+        "total_amount": 254.99,
+        "items": [
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            },
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            },
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            }
+        ],
+        "shipping_address": {
+            "street": "593 Kevin Place",
+            "city": "Peggyburgh",
+            "state": "ME",
+            "zip_code": "62252"
+        }
+    },
+    {
+        "order_id": "6868d6b1-af39-4524-8f8f-9b7884522aa9",
+        "customer_id": "7ece50b6-230e-48c7-8606-661fc10277db",
+        "timestamp": "2026-05-07T18:23:37.361936",
+        "status": "delivered",
+        "total_amount": 235.98,
+        "items": [
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            },
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            },
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            }
+        ],
+        "shipping_address": {
+            "street": "50090 Carr Turnpike",
+            "city": "Vasquezland",
+            "state": "WV",
+            "zip_code": "53811"
+        }
+    },
+    {
+        "order_id": "38cd5106-ba56-4ffc-b219-3f4904102072",
+        "customer_id": "25682d79-81c6-454f-b318-b6965746e4e7",
+        "timestamp": "2026-05-15T18:23:37.361936",
+        "status": "in-transit",
+        "total_amount": 349.99,
+        "items": [
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            }
+        ],
+        "shipping_address": {
+            "street": "7038 Christina Springs Apt. 322",
+            "city": "West Andrewfort",
+            "state": "WV",
+            "zip_code": "17759"
+        }
+    },
+    {
+        "order_id": "dca1dea7-5433-45b2-af66-ab6e831d64e1",
+        "customer_id": "76182db1-0e62-467a-a798-88b5ef6d0820",
+        "timestamp": "2026-05-29T18:23:37.361936",
+        "status": "in-transit",
+        "total_amount": 235.98,
+        "items": [
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            },
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            },
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            }
+        ],
+        "shipping_address": {
+            "street": "73562 Silva Junctions",
+            "city": "Anthonymouth",
+            "state": "UT",
+            "zip_code": "69977"
+        }
+    },
+    {
+        "order_id": "33d232f4-761a-4920-a2bb-a8e61c8ac224",
+        "customer_id": "6fa1dd24-1cb8-4c31-bb5b-c4c70599c7c0",
+        "timestamp": "2026-06-07T18:23:37.363018",
+        "status": "returned",
+        "total_amount": 25.99,
+        "items": [
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            }
+        ],
+        "shipping_address": {
+            "street": "719 Rowe Stream",
+            "city": "Port Andrewland",
+            "state": "MH",
+            "zip_code": "20789"
+        }
+    },
+    {
+        "order_id": "3c1f0b3e-b12b-4b36-b59c-49c212a104c6",
+        "customer_id": "c000fd6b-0dd5-4ed8-ac97-ec9a9c62b702",
+        "timestamp": "2026-04-24T18:23:37.363018",
+        "status": "returned",
+        "total_amount": 199.99,
+        "items": [
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            }
+        ],
+        "shipping_address": {
+            "street": "759 Quinn Unions Apt. 147",
+            "city": "South Elizabethborough",
+            "state": "CO",
+            "zip_code": "41020"
+        }
+    },
+    {
+        "order_id": "0e914039-a6da-41cf-a027-c5808b728e97",
+        "customer_id": "ca12c056-015e-4c2f-9dbc-6b8281762c83",
+        "timestamp": "2026-05-15T18:23:37.363018",
+        "status": "delivered",
+        "total_amount": 225.98,
+        "items": [
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            },
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            }
+        ],
+        "shipping_address": {
+            "street": "6702 Stacey Greens Apt. 826",
+            "city": "Lake Kevin",
+            "state": "MH",
+            "zip_code": "57131"
+        }
+    },
+    {
+        "order_id": "38722629-79ca-4ef4-80d4-96226e3d8d23",
+        "customer_id": "aa643040-689c-4230-9710-1cf15c356ae9",
+        "timestamp": "2026-04-26T18:23:37.364035",
+        "status": "in-transit",
+        "total_amount": 289.98,
+        "items": [
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            },
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            }
+        ],
+        "shipping_address": {
+            "street": "554 David Ville",
+            "city": "South Crystal",
+            "state": "CA",
+            "zip_code": "91598"
+        }
+    },
+    {
+        "order_id": "a2da0ccf-4f20-41b2-92ef-be3964551631",
+        "customer_id": "4c28b317-43f1-40b5-b837-b41062138353",
+        "timestamp": "2026-05-21T18:23:37.364035",
+        "status": "delivered",
+        "total_amount": 25.99,
+        "items": [
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            }
+        ],
+        "shipping_address": {
+            "street": "9209 Craig Cape Apt. 657",
+            "city": "Grantstad",
+            "state": "AZ",
+            "zip_code": "33345"
+        }
+    },
+    {
+        "order_id": "75b709d8-e827-484e-9f09-0966f23a1072",
+        "customer_id": "9eec5d74-6c3c-4faf-b57b-cda81eec5810",
+        "timestamp": "2026-05-20T18:23:37.364035",
+        "status": "returned",
+        "total_amount": 145.99,
+        "items": [
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            },
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            }
+        ],
+        "shipping_address": {
+            "street": "596 Velazquez Forest Suite 695",
+            "city": "Jerryhaven",
+            "state": "TN",
+            "zip_code": "54007"
+        }
+    },
+    {
+        "order_id": "6d1d850e-fcd5-4869-b2b9-b2e0a137b5cf",
+        "customer_id": "7cc7345a-9697-4905-97d6-9fed79eb06ff",
+        "timestamp": "2026-05-31T18:23:37.365042",
+        "status": "in-transit",
+        "total_amount": 465.97,
+        "items": [
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            },
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            },
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            }
+        ],
+        "shipping_address": {
+            "street": "43258 Reyes Run",
+            "city": "Thomasmouth",
+            "state": "ND",
+            "zip_code": "84928"
+        }
+    },
+    {
+        "order_id": "d2d23f9b-b1f0-4c6a-893b-55c6a85ac994",
+        "customer_id": "c5755b5e-adf5-410e-8036-0e3717fc926a",
+        "timestamp": "2026-05-27T18:23:37.365042",
+        "status": "in-transit",
+        "total_amount": 270.98,
+        "items": [
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            },
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            },
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            }
+        ],
+        "shipping_address": {
+            "street": "3355 Erickson Ridges Apt. 718",
+            "city": "East Jerrymouth",
+            "state": "ID",
+            "zip_code": "68570"
+        }
+    },
+    {
+        "order_id": "c1ce41f5-f020-4329-927a-a4c7bc8a5c11",
+        "customer_id": "e465cb68-1850-48f1-bb60-452fd9ae8f7c",
+        "timestamp": "2026-05-13T18:23:37.365042",
+        "status": "delayed",
+        "total_amount": 594.98,
+        "items": [
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            },
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            },
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            }
+        ],
+        "shipping_address": {
+            "street": "87729 Randy Hills Apt. 592",
+            "city": "Kimberlyberg",
+            "state": "RI",
+            "zip_code": "35559"
+        }
+    },
+    {
+        "order_id": "fa4f6a67-0d29-48ca-a0ae-64202e3a806a",
+        "customer_id": "b8abed72-d79a-45e6-a1be-57d3544be484",
+        "timestamp": "2026-06-01T18:23:37.365042",
+        "status": "returned",
+        "total_amount": 25.99,
+        "items": [
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            }
+        ],
+        "shipping_address": {
+            "street": "73403 Reynolds Village Apt. 828",
+            "city": "Perezside",
+            "state": "CA",
+            "zip_code": "44071"
+        }
+    },
+    {
+        "order_id": "784511d8-83b8-47d7-99aa-5a4fdbb13d8e",
+        "customer_id": "17a241d6-820e-47fd-8359-91fcee73187d",
+        "timestamp": "2026-04-27T18:23:37.366061",
+        "status": "delayed",
+        "total_amount": 199.99,
+        "items": [
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            }
+        ],
+        "shipping_address": {
+            "street": "56691 Michelle Walks",
+            "city": "West Jasontown",
+            "state": "RI",
+            "zip_code": "91239"
+        }
+    },
+    {
+        "order_id": "e5de60f6-b03e-48a9-94e6-a72f27aae206",
+        "customer_id": "0b077a6c-37b7-41a2-92fe-5674ab1f7178",
+        "timestamp": "2026-04-15T18:23:37.366061",
+        "status": "returned",
+        "total_amount": 134.99,
+        "items": [
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            },
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            }
+        ],
+        "shipping_address": {
+            "street": "434 Katelyn Path",
+            "city": "Christinaside",
+            "state": "OR",
+            "zip_code": "05057"
+        }
+    },
+    {
+        "order_id": "7d09ac37-3c1b-464f-9c62-fff96b194df8",
+        "customer_id": "76b60976-25d6-4ade-81bf-fd46d4ead702",
+        "timestamp": "2026-05-23T18:23:37.366061",
+        "status": "delayed",
+        "total_amount": 115.98,
+        "items": [
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            },
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            }
+        ],
+        "shipping_address": {
+            "street": "49388 Timothy Lane",
+            "city": "Brandonport",
+            "state": "FL",
+            "zip_code": "66488"
+        }
+    },
+    {
+        "order_id": "f3e9bce1-24e8-4139-b0cb-3187e772ca71",
+        "customer_id": "c90a17f8-58b7-4872-9947-1dd944a7ea5b",
+        "timestamp": "2026-04-15T18:23:37.366061",
+        "status": "in-transit",
+        "total_amount": 134.99,
+        "items": [
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            },
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            }
+        ],
+        "shipping_address": {
+            "street": "5905 Roberson Corner Apt. 048",
+            "city": "Guzmanbury",
+            "state": "WY",
+            "zip_code": "48621"
+        }
+    },
+    {
+        "order_id": "6dc5c321-46d1-48d8-89d2-e9e00b5bcbfe",
+        "customer_id": "78a131ff-b79b-46ca-a68f-3b0f751e0a58",
+        "timestamp": "2026-04-16T18:23:37.367446",
+        "status": "in-transit",
+        "total_amount": 345.98,
+        "items": [
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            },
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            },
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            }
+        ],
+        "shipping_address": {
+            "street": "71013 Reese Ridge Suite 791",
+            "city": "East Lisachester",
+            "state": "GU",
+            "zip_code": "71724"
+        }
+    },
+    {
+        "order_id": "1ecfc34a-c843-4794-a987-056e661c9ef4",
+        "customer_id": "ab6b55e2-227e-4114-838a-146641733ff4",
+        "timestamp": "2026-04-12T18:23:37.367446",
+        "status": "cancelled",
+        "total_amount": 469.99,
+        "items": [
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            },
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            }
+        ],
+        "shipping_address": {
+            "street": "329 Carolyn Overpass",
+            "city": "West Stephanieville",
+            "state": "ID",
+            "zip_code": "08091"
+        }
+    },
+    {
+        "order_id": "e41db257-e459-4f2b-a5cf-73bfa5e662cf",
+        "customer_id": "6e186981-2ef1-4a40-b68c-d03974e3a81d",
+        "timestamp": "2026-05-02T18:23:37.367446",
+        "status": "in-transit",
+        "total_amount": 409.98,
+        "items": [
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            },
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            },
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            }
+        ],
+        "shipping_address": {
+            "street": "39707 Edward Stream",
+            "city": "West Joseph",
+            "state": "VA",
+            "zip_code": "93111"
+        }
+    },
+    {
+        "order_id": "6b32e490-28b4-4ced-b4c7-85b414fea7df",
+        "customer_id": "2597b444-cc65-43eb-b242-79f737831ef9",
+        "timestamp": "2026-05-08T18:23:37.367446",
+        "status": "returned",
+        "total_amount": 45.0,
+        "items": [
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            }
+        ],
+        "shipping_address": {
+            "street": "78625 Shelby Corner Suite 797",
+            "city": "Henryborough",
+            "state": "SC",
+            "zip_code": "78372"
+        }
+    },
+    {
+        "order_id": "c39a2847-2559-471d-8070-c1aaf69020b8",
+        "customer_id": "6344d2c6-a6d3-4b4e-b842-a7ff256b72e9",
+        "timestamp": "2026-05-26T18:23:37.368559",
+        "status": "delayed",
+        "total_amount": 349.99,
+        "items": [
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            }
+        ],
+        "shipping_address": {
+            "street": "95300 Ramos Ridges Suite 627",
+            "city": "Riceland",
+            "state": "HI",
+            "zip_code": "96450"
+        }
+    },
+    {
+        "order_id": "0272b903-9146-4fff-9a96-d5e643961823",
+        "customer_id": "3fed2fdf-f638-4bdc-af0c-b2cb42ab406f",
+        "timestamp": "2026-06-06T18:23:37.368559",
+        "status": "returned",
+        "total_amount": 199.99,
+        "items": [
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            }
+        ],
+        "shipping_address": {
+            "street": "6272 Nicole Brook",
+            "city": "Lake George",
+            "state": "WI",
+            "zip_code": "59645"
+        }
+    },
+    {
+        "order_id": "37581b23-496f-4553-906e-d63818315e56",
+        "customer_id": "9c2b779c-58cc-4242-b05f-859caf02e4e1",
+        "timestamp": "2026-04-30T18:23:37.368559",
+        "status": "delivered",
+        "total_amount": 199.99,
+        "items": [
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            }
+        ],
+        "shipping_address": {
+            "street": "4369 Chambers Drive Apt. 373",
+            "city": "West Dustin",
+            "state": "MI",
+            "zip_code": "67757"
+        }
+    },
+    {
+        "order_id": "edbf1e96-33b1-4926-a014-331eba2a4ddf",
+        "customer_id": "a006a036-4db1-454a-9e29-308964adca5f",
+        "timestamp": "2026-04-27T18:23:37.369585",
+        "status": "in-transit",
+        "total_amount": 514.99,
+        "items": [
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            },
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            },
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            }
+        ],
+        "shipping_address": {
+            "street": "633 Stevens River",
+            "city": "East Rebecca",
+            "state": "MP",
+            "zip_code": "93016"
+        }
+    },
+    {
+        "order_id": "79550010-7913-4fde-8732-2264833ee6e3",
+        "customer_id": "70b01020-455a-406c-ad87-71e3d8851caf",
+        "timestamp": "2026-05-27T18:23:37.369585",
+        "status": "in-transit",
+        "total_amount": 409.98,
+        "items": [
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            },
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            },
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            }
+        ],
+        "shipping_address": {
+            "street": "0371 David Circle",
+            "city": "Cummingsfurt",
+            "state": "IN",
+            "zip_code": "20991"
+        }
+    },
+    {
+        "order_id": "0d79d670-b861-4a85-8e2c-58304f1bd1d0",
+        "customer_id": "20e61ffe-7216-4622-bd03-ca4a7b83be27",
+        "timestamp": "2026-06-06T18:23:37.369585",
+        "status": "delivered",
+        "total_amount": 45.0,
+        "items": [
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            }
+        ],
+        "shipping_address": {
+            "street": "95441 Bradley Courts Suite 306",
+            "city": "Robinsonchester",
+            "state": "DC",
+            "zip_code": "83128"
+        }
+    },
+    {
+        "order_id": "8f4f9772-4c4e-49db-bb5d-1cb97273c8f9",
+        "customer_id": "c33b5a60-a48b-48b8-9d61-d5ab5ef9dca4",
+        "timestamp": "2026-04-16T18:23:37.370568",
+        "status": "in-transit",
+        "total_amount": 120.0,
+        "items": [
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            }
+        ],
+        "shipping_address": {
+            "street": "868 Ward Orchard",
+            "city": "Barbaraview",
+            "state": "MT",
+            "zip_code": "20066"
+        }
+    },
+    {
+        "order_id": "878c9d15-3ce8-414f-9aeb-b1bbee652332",
+        "customer_id": "84bafbb6-8f98-41a5-b62d-3b6d62d1e504",
+        "timestamp": "2026-05-28T18:23:37.370568",
+        "status": "in-transit",
+        "total_amount": 469.99,
+        "items": [
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            },
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            }
+        ],
+        "shipping_address": {
+            "street": "4488 Richmond Springs Suite 244",
+            "city": "Williamsfort",
+            "state": "WV",
+            "zip_code": "97901"
+        }
+    },
+    {
+        "order_id": "b55f42dd-169e-4822-944e-9fce36036bb8",
+        "customer_id": "bd7276a7-4f0e-426a-a25f-f742fd9a4b41",
+        "timestamp": "2026-05-30T18:23:37.370568",
+        "status": "returned",
+        "total_amount": 289.98,
+        "items": [
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            },
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            }
+        ],
+        "shipping_address": {
+            "street": "2577 Yang Lake Apt. 293",
+            "city": "North Johnbury",
+            "state": "CT",
+            "zip_code": "48903"
+        }
+    },
+    {
+        "order_id": "1a89ca48-8e97-43c9-8b7d-eeb17b4e51fa",
+        "customer_id": "32368b67-7aa6-4e97-8d43-d5a56a3d9a10",
+        "timestamp": "2026-04-29T18:23:37.372060",
+        "status": "returned",
+        "total_amount": 120.0,
+        "items": [
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            }
+        ],
+        "shipping_address": {
+            "street": "68180 Deborah Road",
+            "city": "North Tiffany",
+            "state": "MD",
+            "zip_code": "48059"
+        }
+    },
+    {
+        "order_id": "7998fb4d-c9cf-4914-9040-5f32b065de15",
+        "customer_id": "acdfaacf-cddb-488a-856a-9a4df99d154d",
+        "timestamp": "2026-06-08T18:23:37.372060",
+        "status": "in-transit",
+        "total_amount": 289.98,
+        "items": [
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            },
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            }
+        ],
+        "shipping_address": {
+            "street": "23996 Kathleen Ports",
+            "city": "West Cindyton",
+            "state": "NY",
+            "zip_code": "32137"
+        }
+    },
+    {
+        "order_id": "2333fcd2-1347-45f2-8ec0-33e81c24e287",
+        "customer_id": "f241241d-913f-4346-a16b-902addb2ef04",
+        "timestamp": "2026-05-25T18:23:37.372060",
+        "status": "cancelled",
+        "total_amount": 334.98,
+        "items": [
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            },
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            },
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            }
+        ],
+        "shipping_address": {
+            "street": "344 Reyes Port",
+            "city": "Parkston",
+            "state": "ME",
+            "zip_code": "75379"
+        }
+    },
+    {
+        "order_id": "ed69a61d-fc54-4162-8673-aa1047f0c97c",
+        "customer_id": "1705fa8e-5f8c-4b31-b38f-0e0e0f983a48",
+        "timestamp": "2026-06-06T18:23:37.372060",
+        "status": "delivered",
+        "total_amount": 639.97,
+        "items": [
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            },
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            },
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            }
+        ],
+        "shipping_address": {
+            "street": "782 Mendoza Skyway",
+            "city": "West Michelle",
+            "state": "AK",
+            "zip_code": "51201"
+        }
+    },
+    {
+        "order_id": "569e4766-91c9-4ed1-aff1-df99e7f9ffcc",
+        "customer_id": "2aee5f5f-bc0c-48e1-85b5-b7a4b91b2a45",
+        "timestamp": "2026-04-20T18:23:37.373236",
+        "status": "delayed",
+        "total_amount": 465.97,
+        "items": [
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            },
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            },
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            }
+        ],
+        "shipping_address": {
+            "street": "40637 Sanchez Mount",
+            "city": "West Jeremyberg",
+            "state": "PR",
+            "zip_code": "15740"
+        }
+    },
+    {
+        "order_id": "c1f9eb26-2cb3-49ce-a6f8-7b735bbcae7d",
+        "customer_id": "93f46202-cea1-45a4-af8e-a6aab90e2941",
+        "timestamp": "2026-05-05T18:23:37.373236",
+        "status": "returned",
+        "total_amount": 115.98,
+        "items": [
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            },
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            }
+        ],
+        "shipping_address": {
+            "street": "090 Thornton Oval Apt. 211",
+            "city": "East Christophermouth",
+            "state": "NJ",
+            "zip_code": "45003"
+        }
+    },
+    {
+        "order_id": "0ec65755-f7bc-4ba4-a30b-14836948d6d1",
+        "customer_id": "1ca947f9-d933-4886-8372-37e418867987",
+        "timestamp": "2026-04-21T18:23:37.373236",
+        "status": "delivered",
+        "total_amount": 289.98,
+        "items": [
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            },
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            }
+        ],
+        "shipping_address": {
+            "street": "257 Gilmore Knolls",
+            "city": "Figueroabury",
+            "state": "LA",
+            "zip_code": "11151"
+        }
+    },
+    {
+        "order_id": "f2563367-5fab-44c6-b962-ab9fab5e25c1",
+        "customer_id": "763aea1b-9ccd-4a9f-b7a1-5984225ce397",
+        "timestamp": "2026-04-20T18:23:37.374273",
+        "status": "returned",
+        "total_amount": 394.99,
+        "items": [
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            },
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            }
+        ],
+        "shipping_address": {
+            "street": "885 Marcus Point Apt. 288",
+            "city": "New Jonathan",
+            "state": "KY",
+            "zip_code": "70745"
+        }
+    },
+    {
+        "order_id": "6c6dd449-d2b5-4877-9024-9226e09e2a03",
+        "customer_id": "50b0327e-2c7f-4c1e-b006-f12073de8102",
+        "timestamp": "2026-05-19T18:23:37.374273",
+        "status": "cancelled",
+        "total_amount": 45.0,
+        "items": [
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            }
+        ],
+        "shipping_address": {
+            "street": "843 Daniel Overpass Apt. 882",
+            "city": "West Markbury",
+            "state": "IN",
+            "zip_code": "19488"
+        }
+    },
+    {
+        "order_id": "a9aa1a14-4826-4355-aad7-6a539a84585c",
+        "customer_id": "e26bd376-5a3f-44f8-bf66-69d89b7d680c",
+        "timestamp": "2026-05-07T18:23:37.374273",
+        "status": "cancelled",
+        "total_amount": 254.99,
+        "items": [
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            },
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            },
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            }
+        ],
+        "shipping_address": {
+            "street": "88631 Fox Locks",
+            "city": "East Lisaland",
+            "state": "ID",
+            "zip_code": "64655"
+        }
+    },
+    {
+        "order_id": "3d5ac5e5-9a48-4cbc-81e8-2d399a1c6a86",
+        "customer_id": "9f6492a6-a075-4130-8e1d-31443d007637",
+        "timestamp": "2026-04-15T18:23:37.375334",
+        "status": "in-transit",
+        "total_amount": 594.98,
+        "items": [
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            },
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            },
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            }
+        ],
+        "shipping_address": {
+            "street": "84328 Justin Tunnel Suite 130",
+            "city": "West Lisa",
+            "state": "MO",
+            "zip_code": "57228"
+        }
+    },
+    {
+        "order_id": "83af57e5-e3fb-45a2-8822-ccd0d5397eca",
+        "customer_id": "261bf8e1-e4db-4607-b930-250f361bdb7a",
+        "timestamp": "2026-05-07T18:23:37.375334",
+        "status": "returned",
+        "total_amount": 465.97,
+        "items": [
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            },
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            },
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            }
+        ],
+        "shipping_address": {
+            "street": "2153 David Skyway",
+            "city": "Mcintyreton",
+            "state": "MP",
+            "zip_code": "56845"
+        }
+    },
+    {
+        "order_id": "4456e018-edf4-4e54-94f0-a9d070b9faa4",
+        "customer_id": "aa65e107-4519-47bb-bbe5-4d20dc303e9d",
+        "timestamp": "2026-05-03T18:23:37.375334",
+        "status": "cancelled",
+        "total_amount": 420.98,
+        "items": [
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            },
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            },
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            }
+        ],
+        "shipping_address": {
+            "street": "787 Fisher Freeway Apt. 530",
+            "city": "Laraville",
+            "state": "IA",
+            "zip_code": "19620"
+        }
+    },
+    {
+        "order_id": "1643b945-5216-4282-bbdf-8fccd107035e",
+        "customer_id": "254b0db1-3f62-47ba-a7a4-77047b8342a2",
+        "timestamp": "2026-04-22T18:23:37.375334",
+        "status": "delayed",
+        "total_amount": 469.99,
+        "items": [
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            },
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            }
+        ],
+        "shipping_address": {
+            "street": "970 Rodriguez Rest Suite 976",
+            "city": "Johnsonfort",
+            "state": "NV",
+            "zip_code": "51560"
+        }
+    },
+    {
+        "order_id": "6e1f7375-cbaf-4676-9ec4-6285d9d127b1",
+        "customer_id": "c34fd6fb-6992-4cb0-bc19-3e8d6562aa6d",
+        "timestamp": "2026-05-12T18:23:37.376406",
+        "status": "cancelled",
+        "total_amount": 120.0,
+        "items": [
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            }
+        ],
+        "shipping_address": {
+            "street": "4518 Alec Fork Apt. 496",
+            "city": "Dianeburgh",
+            "state": "UT",
+            "zip_code": "22615"
+        }
+    },
+    {
+        "order_id": "e73190ca-6dd6-40d1-9169-def2c12add87",
+        "customer_id": "0f8400c1-db18-4bfb-8dab-991a6116ddbf",
+        "timestamp": "2026-05-29T18:23:37.376406",
+        "status": "returned",
+        "total_amount": 345.98,
+        "items": [
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            },
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            },
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            }
+        ],
+        "shipping_address": {
+            "street": "11990 Morgan Corner Apt. 805",
+            "city": "New Jennifer",
+            "state": "FM",
+            "zip_code": "25607"
+        }
+    },
+    {
+        "order_id": "44d813e0-f413-4cdf-8012-eac75963c0e2",
+        "customer_id": "c45f0398-2fab-4dfe-a033-84a615f3b8a1",
+        "timestamp": "2026-04-21T18:23:37.376406",
+        "status": "delivered",
+        "total_amount": 89.99,
+        "items": [
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            }
+        ],
+        "shipping_address": {
+            "street": "2210 Amy Key",
+            "city": "North Jessica",
+            "state": "DC",
+            "zip_code": "19410"
+        }
+    },
+    {
+        "order_id": "956d3b56-0c4e-4e5e-ba7e-dd561f85666d",
+        "customer_id": "c3e99df1-0134-4c23-b2b8-52003b003d14",
+        "timestamp": "2026-05-28T18:23:37.377444",
+        "status": "cancelled",
+        "total_amount": 669.98,
+        "items": [
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            },
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            },
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            }
+        ],
+        "shipping_address": {
+            "street": "5848 Amy Island",
+            "city": "West Joshuahaven",
+            "state": "VA",
+            "zip_code": "90967"
+        }
+    },
+    {
+        "order_id": "43366568-e2c8-4fdd-b15e-9ca68526e523",
+        "customer_id": "f6e770b7-4902-447f-8150-c4b94b2fa48a",
+        "timestamp": "2026-04-23T18:23:37.377444",
+        "status": "returned",
+        "total_amount": 45.0,
+        "items": [
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            }
+        ],
+        "shipping_address": {
+            "street": "9987 Noble Burg",
+            "city": "Robinsonview",
+            "state": "FL",
+            "zip_code": "12401"
+        }
+    },
+    {
+        "order_id": "104b8bac-40bc-4c9c-b1cb-42a0aebf68a7",
+        "customer_id": "b32d5f6f-a8b5-4bd2-8aa4-dea6fa6f2166",
+        "timestamp": "2026-05-22T18:23:37.377444",
+        "status": "cancelled",
+        "total_amount": 349.99,
+        "items": [
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            }
+        ],
+        "shipping_address": {
+            "street": "091 Rita Mall",
+            "city": "Deborahfurt",
+            "state": "VT",
+            "zip_code": "88977"
+        }
+    },
+    {
+        "order_id": "a7aaa49c-bf52-4e7b-a0cf-197606f8f44b",
+        "customer_id": "19e61ed7-80ec-48bc-8bb1-865bebca573f",
+        "timestamp": "2026-04-17T18:23:37.377444",
+        "status": "in-transit",
+        "total_amount": 364.99,
+        "items": [
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            },
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            },
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            }
+        ],
+        "shipping_address": {
+            "street": "2457 Stanley Villages Apt. 807",
+            "city": "Nicolestad",
+            "state": "TX",
+            "zip_code": "70153"
+        }
+    },
+    {
+        "order_id": "6ac32f59-7c17-4f0f-86cd-5183b8376fe6",
+        "customer_id": "ecd5ae2d-009c-430f-a875-f3b9551b39e8",
+        "timestamp": "2026-04-29T18:23:37.378619",
+        "status": "delivered",
+        "total_amount": 409.98,
+        "items": [
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            },
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            },
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            }
+        ],
+        "shipping_address": {
+            "street": "93560 Bishop Glens",
+            "city": "Jacksonbury",
+            "state": "IN",
+            "zip_code": "88908"
+        }
+    },
+    {
+        "order_id": "08c9dc7d-42bc-400f-acbc-1a844f76b895",
+        "customer_id": "3d58d38b-2fa4-4582-9493-5e95400296b1",
+        "timestamp": "2026-06-08T18:23:37.378619",
+        "status": "delayed",
+        "total_amount": 160.98,
+        "items": [
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            },
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            },
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            }
+        ],
+        "shipping_address": {
+            "street": "3393 Cory Points Apt. 896",
+            "city": "Torresland",
+            "state": "CA",
+            "zip_code": "50217"
+        }
+    },
+    {
+        "order_id": "e3743c80-d9fa-4ea3-aa32-4f07963da933",
+        "customer_id": "3fcbc086-d133-490d-a35d-2d494e9faa7d",
+        "timestamp": "2026-04-11T18:23:37.378619",
+        "status": "cancelled",
+        "total_amount": 160.98,
+        "items": [
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            },
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            },
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            }
+        ],
+        "shipping_address": {
+            "street": "4229 Norris Summit Suite 447",
+            "city": "Port Molly",
+            "state": "WI",
+            "zip_code": "07265"
+        }
+    },
+    {
+        "order_id": "732e332b-34c4-43d1-a694-effa4ab80b88",
+        "customer_id": "5ffea8e3-3ba9-4ee8-af17-b671729b642a",
+        "timestamp": "2026-06-02T18:23:37.379665",
+        "status": "cancelled",
+        "total_amount": 289.98,
+        "items": [
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            },
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            }
+        ],
+        "shipping_address": {
+            "street": "25475 James Squares Apt. 199",
+            "city": "Lunafort",
+            "state": "PA",
+            "zip_code": "29871"
+        }
+    },
+    {
+        "order_id": "cba48d89-146d-4d5b-9e9d-aadd834113f7",
+        "customer_id": "43de28f7-aed8-4973-961a-ecfd99fc202a",
+        "timestamp": "2026-04-29T18:23:37.379665",
+        "status": "in-transit",
+        "total_amount": 469.99,
+        "items": [
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            },
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            }
+        ],
+        "shipping_address": {
+            "street": "1223 Teresa Harbor Suite 334",
+            "city": "East Rachel",
+            "state": "GA",
+            "zip_code": "56729"
+        }
+    },
+    {
+        "order_id": "f1234472-e029-4f45-a360-e6b210ee52d7",
+        "customer_id": "92e5f327-5585-44de-9c01-4fad63d4caba",
+        "timestamp": "2026-04-13T18:23:37.379665",
+        "status": "delivered",
+        "total_amount": 25.99,
+        "items": [
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            }
+        ],
+        "shipping_address": {
+            "street": "2470 Lawrence Parkways Suite 286",
+            "city": "Lake Danny",
+            "state": "PW",
+            "zip_code": "30629"
+        }
+    },
+    {
+        "order_id": "2d61871b-5599-4c73-9fdd-b2d1d9f169a1",
+        "customer_id": "134139b7-6de6-4953-9979-88c1b000463e",
+        "timestamp": "2026-05-22T18:23:37.380698",
+        "status": "delivered",
+        "total_amount": 639.97,
+        "items": [
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            },
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            },
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            }
+        ],
+        "shipping_address": {
+            "street": "47073 Smith Brooks Suite 843",
+            "city": "Lake Nicoleshire",
+            "state": "CT",
+            "zip_code": "36434"
+        }
+    },
+    {
+        "order_id": "2c6f3899-3e5f-4d03-a3de-b1cb24cd07fc",
+        "customer_id": "bcd94f2b-8dfe-40c6-9fce-c87998f328a9",
+        "timestamp": "2026-05-15T18:23:37.380698",
+        "status": "returned",
+        "total_amount": 484.98,
+        "items": [
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            },
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            },
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            }
+        ],
+        "shipping_address": {
+            "street": "6212 Patricia Ridges",
+            "city": "Grantburgh",
+            "state": "KY",
+            "zip_code": "68709"
+        }
+    },
+    {
+        "order_id": "1c7dfdca-f8d6-4202-b592-cb28f20a81c2",
+        "customer_id": "3600c918-7376-4f3d-b221-e6a5067745e2",
+        "timestamp": "2026-04-30T18:23:37.380698",
+        "status": "cancelled",
+        "total_amount": 209.99,
+        "items": [
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            },
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            }
+        ],
+        "shipping_address": {
+            "street": "9908 Dawn Junction",
+            "city": "Kellymouth",
+            "state": "ME",
+            "zip_code": "68763"
+        }
+    },
+    {
+        "order_id": "b7dbf05e-8347-4eb9-9c39-6ce6e0a38659",
+        "customer_id": "0158f588-bdfd-483d-94ac-5e96284395db",
+        "timestamp": "2026-06-04T18:23:37.380698",
+        "status": "in-transit",
+        "total_amount": 120.0,
+        "items": [
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            }
+        ],
+        "shipping_address": {
+            "street": "0972 Steve Forest Suite 071",
+            "city": "Youngmouth",
+            "state": "WY",
+            "zip_code": "03161"
+        }
+    },
+    {
+        "order_id": "8d5a82c4-021d-44f6-b500-adece43fe923",
+        "customer_id": "a22ae9ad-7e39-41a0-aad9-0ea25b8e9139",
+        "timestamp": "2026-05-10T18:23:37.381772",
+        "status": "delayed",
+        "total_amount": 160.98,
+        "items": [
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            },
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            },
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            }
+        ],
+        "shipping_address": {
+            "street": "054 Montgomery Centers Apt. 784",
+            "city": "Adamsfurt",
+            "state": "DE",
+            "zip_code": "96660"
+        }
+    },
+    {
+        "order_id": "2c6c0465-c980-4e15-abd5-100bb98ae664",
+        "customer_id": "c216492b-4923-49bf-900c-a5b24b5c2e35",
+        "timestamp": "2026-05-24T18:23:37.381772",
+        "status": "cancelled",
+        "total_amount": 349.99,
+        "items": [
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            }
+        ],
+        "shipping_address": {
+            "street": "04244 Dalton Station",
+            "city": "East Kellyberg",
+            "state": "CO",
+            "zip_code": "32343"
+        }
+    },
+    {
+        "order_id": "84eab776-28e4-43e1-a52a-5ecb84dec28d",
+        "customer_id": "763e79aa-7cb2-4f5f-8f2b-6103d2795642",
+        "timestamp": "2026-05-30T18:23:37.381772",
+        "status": "returned",
+        "total_amount": 165.0,
+        "items": [
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            },
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            }
+        ],
+        "shipping_address": {
+            "street": "15747 Jones Shores",
+            "city": "Markshire",
+            "state": "VI",
+            "zip_code": "95128"
+        }
+    },
+    {
+        "order_id": "639a4891-af86-4531-aa78-d8b863e40d47",
+        "customer_id": "1b900b1d-0dca-453b-8e05-0d08bcd2bcf6",
+        "timestamp": "2026-06-03T18:23:37.382944",
+        "status": "delivered",
+        "total_amount": 165.0,
+        "items": [
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            },
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            }
+        ],
+        "shipping_address": {
+            "street": "30512 Miller Port",
+            "city": "Perkinsbury",
+            "state": "NM",
+            "zip_code": "24511"
+        }
+    },
+    {
+        "order_id": "a4347bea-1ec3-4205-b78f-c911218da8a6",
+        "customer_id": "8fc7c019-7d1e-4a30-873e-b11949210646",
+        "timestamp": "2026-04-21T18:23:37.382944",
+        "status": "delayed",
+        "total_amount": 394.99,
+        "items": [
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            },
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            }
+        ],
+        "shipping_address": {
+            "street": "466 Farmer Well",
+            "city": "Jonesside",
+            "state": "MP",
+            "zip_code": "57875"
+        }
+    },
+    {
+        "order_id": "d6295f87-2099-488c-9483-80604f643467",
+        "customer_id": "28035c51-8e95-4c83-862e-0382e91bf645",
+        "timestamp": "2026-04-28T18:23:37.382944",
+        "status": "returned",
+        "total_amount": 244.99,
+        "items": [
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            },
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            }
+        ],
+        "shipping_address": {
+            "street": "779 Emily Path Suite 901",
+            "city": "Henryton",
+            "state": "NY",
+            "zip_code": "32639"
+        }
+    },
+    {
+        "order_id": "245a1d07-4039-4ea7-86ea-2fc03fefb12b",
+        "customer_id": "c4da88bd-c8a8-43e3-ae15-7372cf2fa574",
+        "timestamp": "2026-05-02T18:23:37.382944",
+        "status": "in-transit",
+        "total_amount": 134.99,
+        "items": [
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            },
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            }
+        ],
+        "shipping_address": {
+            "street": "5202 Wright Burg Suite 044",
+            "city": "Lake Ericside",
+            "state": "MP",
+            "zip_code": "98874"
+        }
+    },
+    {
+        "order_id": "ccab6c03-ba60-4545-b79a-012726ce4e37",
+        "customer_id": "85133f90-aed9-496c-8312-0cbe8e95eb8b",
+        "timestamp": "2026-04-26T18:23:37.384396",
+        "status": "in-transit",
+        "total_amount": 334.98,
+        "items": [
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            },
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            },
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            }
+        ],
+        "shipping_address": {
+            "street": "4859 Jacob Mountains Suite 247",
+            "city": "Hectorfort",
+            "state": "MP",
+            "zip_code": "67956"
+        }
+    },
+    {
+        "order_id": "414d7128-9b5e-4f00-ae8b-fa2b627e3dc3",
+        "customer_id": "a6aa4bb2-96df-4f6d-b848-366896098a69",
+        "timestamp": "2026-06-04T18:23:37.384396",
+        "status": "delivered",
+        "total_amount": 120.0,
+        "items": [
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            }
+        ],
+        "shipping_address": {
+            "street": "52781 Hunt Manor",
+            "city": "Port Victoriaport",
+            "state": "RI",
+            "zip_code": "83268"
+        }
+    },
+    {
+        "order_id": "4c9a0c52-6602-4d1d-942b-d6f319923a12",
+        "customer_id": "4d62dc78-4a0f-4343-a61f-f77aee12e8f4",
+        "timestamp": "2026-05-04T18:23:37.384396",
+        "status": "cancelled",
+        "total_amount": 319.99,
+        "items": [
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            },
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            }
+        ],
+        "shipping_address": {
+            "street": "69840 Lopez Cape",
+            "city": "Goodmantown",
+            "state": "VT",
+            "zip_code": "02611"
+        }
+    },
+    {
+        "order_id": "d5872b54-05d9-4d8d-9d05-6b2f86e405b2",
+        "customer_id": "a652a0d7-853b-48b0-8f77-8578d70e5434",
+        "timestamp": "2026-04-23T18:23:37.385495",
+        "status": "returned",
+        "total_amount": 190.99,
+        "items": [
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            },
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            },
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            }
+        ],
+        "shipping_address": {
+            "street": "16956 Judy Mountains Apt. 826",
+            "city": "West Karen",
+            "state": "NE",
+            "zip_code": "13011"
+        }
+    },
+    {
+        "order_id": "69e7218a-3ba2-46a8-815c-dfb5c04b5cdf",
+        "customer_id": "7ce5a92c-5ca4-4b70-801a-b3bcc6b7db4e",
+        "timestamp": "2026-05-30T18:23:37.385495",
+        "status": "cancelled",
+        "total_amount": 225.98,
+        "items": [
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            },
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            }
+        ],
+        "shipping_address": {
+            "street": "09239 Victor Meadows",
+            "city": "Lake Monicaburgh",
+            "state": "SC",
+            "zip_code": "16863"
+        }
+    },
+    {
+        "order_id": "d692e682-3e69-4072-b3d8-6ee1b2babe4f",
+        "customer_id": "d7f9e928-7668-442e-92be-554a365be000",
+        "timestamp": "2026-04-15T18:23:37.385495",
+        "status": "in-transit",
+        "total_amount": 469.99,
+        "items": [
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            },
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            }
+        ],
+        "shipping_address": {
+            "street": "7454 Jacobs Station",
+            "city": "Jasmineburgh",
+            "state": "CO",
+            "zip_code": "60658"
+        }
+    },
+    {
+        "order_id": "b87e1ba9-4050-4c6a-a0d1-8a8a8af247d3",
+        "customer_id": "a3381a38-4246-4f7d-b6c0-50bdaf3c5cf2",
+        "timestamp": "2026-05-30T18:23:37.385495",
+        "status": "delayed",
+        "total_amount": 89.99,
+        "items": [
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            }
+        ],
+        "shipping_address": {
+            "street": "42275 Macias Glen Suite 078",
+            "city": "West Jaredchester",
+            "state": "IN",
+            "zip_code": "02983"
+        }
+    },
+    {
+        "order_id": "a66ab1d0-9f90-44b0-8236-7533dce77383",
+        "customer_id": "1d690337-14aa-4071-9390-16413de27760",
+        "timestamp": "2026-04-25T18:23:37.386527",
+        "status": "returned",
+        "total_amount": 244.99,
+        "items": [
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            },
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            }
+        ],
+        "shipping_address": {
+            "street": "16479 Davies Course",
+            "city": "Saraside",
+            "state": "MA",
+            "zip_code": "85127"
+        }
+    },
+    {
+        "order_id": "a1d570c7-b3e8-4bc3-994d-fc61b28a7327",
+        "customer_id": "3871b5ca-5353-4c31-adb0-79725a13b10f",
+        "timestamp": "2026-05-25T18:23:37.386527",
+        "status": "returned",
+        "total_amount": 319.99,
+        "items": [
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            },
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            }
+        ],
+        "shipping_address": {
+            "street": "206 Lawson Ports Apt. 504",
+            "city": "New Loriton",
+            "state": "OK",
+            "zip_code": "56266"
+        }
+    },
+    {
+        "order_id": "2dd5d621-1c10-44cc-8cf9-b7bd5b1bbe76",
+        "customer_id": "949ab790-65ff-4a6a-81a3-70931d1cb300",
+        "timestamp": "2026-05-10T18:23:37.386527",
+        "status": "returned",
+        "total_amount": 70.99,
+        "items": [
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            },
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            }
+        ],
+        "shipping_address": {
+            "street": "33233 Webb Ramp",
+            "city": "Lake Matthew",
+            "state": "FM",
+            "zip_code": "64748"
+        }
+    },
+    {
+        "order_id": "fece6134-0675-42fe-b3e3-7cd2a33f0310",
+        "customer_id": "daeec420-a72a-476c-9a00-c7e9e60c60e1",
+        "timestamp": "2026-04-18T18:23:37.387800",
+        "status": "in-transit",
+        "total_amount": 120.0,
+        "items": [
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            }
+        ],
+        "shipping_address": {
+            "street": "170 Smith Vista Apt. 132",
+            "city": "Andersonhaven",
+            "state": "PA",
+            "zip_code": "62495"
+        }
+    },
+    {
+        "order_id": "7afe2080-23ae-4943-9e8e-b01f934c1bf8",
+        "customer_id": "d0df1d85-bbf0-4938-93d5-4cc9ea01befc",
+        "timestamp": "2026-06-07T18:23:37.387800",
+        "status": "in-transit",
+        "total_amount": 484.98,
+        "items": [
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            },
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            },
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            }
+        ],
+        "shipping_address": {
+            "street": "46061 Fuller Corner Suite 985",
+            "city": "North Wendyside",
+            "state": "KS",
+            "zip_code": "35255"
+        }
+    },
+    {
+        "order_id": "782f5c42-6f31-4c62-b44c-f3367c40d331",
+        "customer_id": "b6208a13-203d-45fd-99df-4b4ac29362ca",
+        "timestamp": "2026-05-11T18:23:37.387800",
+        "status": "returned",
+        "total_amount": 439.98,
+        "items": [
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            },
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            }
+        ],
+        "shipping_address": {
+            "street": "237 Marks Ville Suite 385",
+            "city": "Port Davidburgh",
+            "state": "SD",
+            "zip_code": "85504"
+        }
+    },
+    {
+        "order_id": "bd0ac308-9cab-494c-b7e1-f26d4144d111",
+        "customer_id": "0e6433fc-ea69-48cf-9174-7a68d0ba3f4c",
+        "timestamp": "2026-04-12T18:23:37.388841",
+        "status": "cancelled",
+        "total_amount": 199.99,
+        "items": [
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            }
+        ],
+        "shipping_address": {
+            "street": "407 Emily Estate Apt. 072",
+            "city": "North Lindaburgh",
+            "state": "AK",
+            "zip_code": "02908"
+        }
+    },
+    {
+        "order_id": "edcc49f4-bcea-4a87-80a9-0243f9cae19c",
+        "customer_id": "8ac7e536-e151-4662-86f1-6768f417dea3",
+        "timestamp": "2026-05-01T18:23:37.388841",
+        "status": "cancelled",
+        "total_amount": 375.98,
+        "items": [
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            },
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            }
+        ],
+        "shipping_address": {
+            "street": "649 Robin Tunnel",
+            "city": "Port Andrewshire",
+            "state": "UT",
+            "zip_code": "27958"
+        }
+    },
+    {
+        "order_id": "ac25aef9-2075-4d38-ac44-a801e09c8f30",
+        "customer_id": "54f19c34-b936-4511-adc0-05dfed7ce4c6",
+        "timestamp": "2026-05-29T18:23:37.388841",
+        "status": "returned",
+        "total_amount": 315.97,
+        "items": [
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            },
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            },
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            }
+        ],
+        "shipping_address": {
+            "street": "66126 Andre Brooks",
+            "city": "East Amy",
+            "state": "KY",
+            "zip_code": "04003"
+        }
+    },
+    {
+        "order_id": "996ca75e-2b04-4477-8122-3091bc916973",
+        "customer_id": "fb2893b7-7f9d-496e-a223-507af4b5f4c9",
+        "timestamp": "2026-05-26T18:23:37.388841",
+        "status": "cancelled",
+        "total_amount": 375.98,
+        "items": [
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            },
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            }
+        ],
+        "shipping_address": {
+            "street": "339 Jeremy Points Suite 264",
+            "city": "Wendyfort",
+            "state": "PW",
+            "zip_code": "54308"
+        }
+    },
+    {
+        "order_id": "c4df2a4e-b673-476c-8d72-ae91d2398961",
+        "customer_id": "d18671f8-ade3-42c2-a0ff-b8e02598800c",
+        "timestamp": "2026-05-27T18:23:37.389859",
+        "status": "returned",
+        "total_amount": 439.98,
+        "items": [
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            },
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            }
+        ],
+        "shipping_address": {
+            "street": "8458 Kimberly Brooks",
+            "city": "Brianfort",
+            "state": "NY",
+            "zip_code": "50912"
+        }
+    },
+    {
+        "order_id": "b461b707-60d3-4601-b449-30286cb3ac70",
+        "customer_id": "add08bec-4fa9-416a-a18c-bef1e0b9905c",
+        "timestamp": "2026-06-06T18:23:37.389859",
+        "status": "in-transit",
+        "total_amount": 120.0,
+        "items": [
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            }
+        ],
+        "shipping_address": {
+            "street": "5577 Gonzales Ferry Apt. 683",
+            "city": "Michaelburgh",
+            "state": "OH",
+            "zip_code": "21932"
+        }
+    },
+    {
+        "order_id": "2efca341-77c1-4c69-acf1-71effdfe274a",
+        "customer_id": "a3a87297-9f36-4fd7-acc9-0fc5d000e6dc",
+        "timestamp": "2026-06-03T18:23:37.389859",
+        "status": "delivered",
+        "total_amount": 45.0,
+        "items": [
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            }
+        ],
+        "shipping_address": {
+            "street": "193 Thomas Lakes Apt. 922",
+            "city": "Juliastad",
+            "state": "AS",
+            "zip_code": "46188"
+        }
+    },
+    {
+        "order_id": "5ee3a3d4-47d9-442b-9b3c-1369f1f03547",
+        "customer_id": "5118c996-06b2-4123-814b-1eac6e2f1d52",
+        "timestamp": "2026-04-24T18:23:37.389859",
+        "status": "delayed",
+        "total_amount": 549.98,
+        "items": [
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            },
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            }
+        ],
+        "shipping_address": {
+            "street": "73137 Houston Spring",
+            "city": "Cannonton",
+            "state": "MN",
+            "zip_code": "05662"
+        }
+    },
+    {
+        "order_id": "f1dbbb07-a409-4116-aa50-509abd8580ae",
+        "customer_id": "75b0afb9-e8e7-4f41-980d-6ef2c59e7d92",
+        "timestamp": "2026-05-17T18:23:37.391101",
+        "status": "in-transit",
+        "total_amount": 89.99,
+        "items": [
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            }
+        ],
+        "shipping_address": {
+            "street": "644 Gregory Trail Suite 177",
+            "city": "Lake Kevin",
+            "state": "NC",
+            "zip_code": "56960"
+        }
+    },
+    {
+        "order_id": "4fa012f8-0115-458c-b24f-1ac3848b117c",
+        "customer_id": "5e4fd47b-dc6a-4ba6-b819-c90f185c13d0",
+        "timestamp": "2026-04-16T18:23:37.391101",
+        "status": "returned",
+        "total_amount": 594.98,
+        "items": [
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            },
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            },
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            }
+        ],
+        "shipping_address": {
+            "street": "5600 Page Coves Apt. 296",
+            "city": "West Frankburgh",
+            "state": "MI",
+            "zip_code": "64664"
+        }
+    },
+    {
+        "order_id": "46228b59-303b-40e6-800a-a86bba53451c",
+        "customer_id": "2bd13fa4-bf6c-4acf-9c48-ad2a44d54f4e",
+        "timestamp": "2026-05-09T18:23:37.391101",
+        "status": "delivered",
+        "total_amount": 199.99,
+        "items": [
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            }
+        ],
+        "shipping_address": {
+            "street": "96143 Lewis Plaza Apt. 450",
+            "city": "Elizabethchester",
+            "state": "NV",
+            "zip_code": "01907"
+        }
+    },
+    {
+        "order_id": "b631e59c-aed9-4bbf-b335-563f12a950a1",
+        "customer_id": "61c98fdc-9a5b-4c71-bee8-32bbf94a1c36",
+        "timestamp": "2026-06-06T18:23:37.392137",
+        "status": "delayed",
+        "total_amount": 199.99,
+        "items": [
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            }
+        ],
+        "shipping_address": {
+            "street": "198 Taylor Ferry",
+            "city": "Jillview",
+            "state": "KY",
+            "zip_code": "41812"
+        }
+    },
+    {
+        "order_id": "4a95d3df-78c9-4738-a9cf-e80ac7de86c0",
+        "customer_id": "9d3446e3-9b9d-4e1a-99fd-c058089fc071",
+        "timestamp": "2026-04-26T18:23:37.392137",
+        "status": "returned",
+        "total_amount": 120.0,
+        "items": [
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            }
+        ],
+        "shipping_address": {
+            "street": "72796 Fernandez Prairie Apt. 657",
+            "city": "Jonathanshire",
+            "state": "TN",
+            "zip_code": "39246"
+        }
+    },
+    {
+        "order_id": "5fae87f2-d469-4672-92f9-f306f5a89b55",
+        "customer_id": "f6fa92f2-d6a2-494a-bf62-cdf01b372abd",
+        "timestamp": "2026-04-13T18:23:37.392137",
+        "status": "delivered",
+        "total_amount": 349.99,
+        "items": [
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            }
+        ],
+        "shipping_address": {
+            "street": "04446 Mclaughlin Burg",
+            "city": "East Patriciaborough",
+            "state": "RI",
+            "zip_code": "30577"
+        }
+    },
+    {
+        "order_id": "bfd09029-b833-45fb-8853-cb6a5782705d",
+        "customer_id": "4d41e60e-79aa-4687-9982-183d11464f21",
+        "timestamp": "2026-05-10T18:23:37.393140",
+        "status": "returned",
+        "total_amount": 575.97,
+        "items": [
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            },
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            },
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            }
+        ],
+        "shipping_address": {
+            "street": "809 Donald Cliffs",
+            "city": "North Amberland",
+            "state": "IN",
+            "zip_code": "67057"
+        }
+    },
+    {
+        "order_id": "06025e26-25ff-4810-bc59-c62c77434819",
+        "customer_id": "3d9888a4-fdae-4cb5-a5f7-4f0803aaf7e2",
+        "timestamp": "2026-05-26T18:23:37.393140",
+        "status": "delivered",
+        "total_amount": 199.99,
+        "items": [
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            }
+        ],
+        "shipping_address": {
+            "street": "300 Mark Club Apt. 813",
+            "city": "Drakebury",
+            "state": "SD",
+            "zip_code": "63726"
+        }
+    },
+    {
+        "order_id": "f85f837a-52df-40da-8dd2-6d128899e0de",
+        "customer_id": "7cf8176b-6624-4d81-b247-3f57e1a66d09",
+        "timestamp": "2026-04-20T18:23:37.393140",
+        "status": "in-transit",
+        "total_amount": 199.99,
+        "items": [
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            }
+        ],
+        "shipping_address": {
+            "street": "1080 Ryan Estate",
+            "city": "Lake Kristin",
+            "state": "GA",
+            "zip_code": "76727"
+        }
+    },
+    {
+        "order_id": "7a99c479-c4e2-41b1-b767-6109e00e58a1",
+        "customer_id": "a42fef8b-9a72-406a-9c04-0656aa744c07",
+        "timestamp": "2026-05-05T18:23:37.394141",
+        "status": "cancelled",
+        "total_amount": 165.0,
+        "items": [
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            },
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            }
+        ],
+        "shipping_address": {
+            "street": "85300 Denise Walks Suite 225",
+            "city": "East Anne",
+            "state": "ID",
+            "zip_code": "96387"
+        }
+    },
+    {
+        "order_id": "fde469a5-76de-4415-b92b-3f050ddeae67",
+        "customer_id": "64f0c7ad-f1ac-4a92-abaf-0ef3d0daad5c",
+        "timestamp": "2026-06-01T18:23:37.394141",
+        "status": "delivered",
+        "total_amount": 439.98,
+        "items": [
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            },
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            }
+        ],
+        "shipping_address": {
+            "street": "546 Matthew Terrace Apt. 745",
+            "city": "Lake Noah",
+            "state": "PR",
+            "zip_code": "12437"
+        }
+    },
+    {
+        "order_id": "cfbdff8b-4559-4a5f-a7cd-12832a40a85c",
+        "customer_id": "2d5d02e4-c27f-412b-8080-e0b70d2b3808",
+        "timestamp": "2026-04-25T18:23:37.394141",
+        "status": "delivered",
+        "total_amount": 199.99,
+        "items": [
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            }
+        ],
+        "shipping_address": {
+            "street": "225 Chelsea Fields",
+            "city": "Jenniferton",
+            "state": "IL",
+            "zip_code": "47003"
+        }
+    },
+    {
+        "order_id": "2569c8af-382b-4a6b-b6b5-5f8ae4a15b17",
+        "customer_id": "713d05f2-85a7-4445-a279-7c1bacccaff7",
+        "timestamp": "2026-04-10T18:23:37.394141",
+        "status": "delivered",
+        "total_amount": 45.0,
+        "items": [
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            }
+        ],
+        "shipping_address": {
+            "street": "125 Fernandez Mission Suite 224",
+            "city": "Anitabury",
+            "state": "CO",
+            "zip_code": "85800"
+        }
+    },
+    {
+        "order_id": "6c8cfd79-f706-4220-bd61-5b975414b4fd",
+        "customer_id": "3c6a1aaa-7349-4f5a-bf09-07248cc31cce",
+        "timestamp": "2026-04-27T18:23:37.394141",
+        "status": "delayed",
+        "total_amount": 45.0,
+        "items": [
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            }
+        ],
+        "shipping_address": {
+            "street": "22859 Garrett Brook",
+            "city": "South David",
+            "state": "OK",
+            "zip_code": "91884"
+        }
+    },
+    {
+        "order_id": "51d1f2ba-b919-4be5-83cf-61e8cdf293d6",
+        "customer_id": "cc9bb041-b8a6-46b4-9b2e-5380d40e7ec5",
+        "timestamp": "2026-05-07T18:23:37.395424",
+        "status": "cancelled",
+        "total_amount": 594.98,
+        "items": [
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            },
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            },
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            }
+        ],
+        "shipping_address": {
+            "street": "56765 Adam Tunnel",
+            "city": "Scottburgh",
+            "state": "KS",
+            "zip_code": "98107"
+        }
+    },
+    {
+        "order_id": "4ec0dced-0223-4f87-a42e-0dfa319f0acc",
+        "customer_id": "3e9754a1-f00e-454a-a7b0-b692f7a7ca1f",
+        "timestamp": "2026-05-19T18:23:37.395929",
+        "status": "delivered",
+        "total_amount": 209.99,
+        "items": [
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            },
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            }
+        ],
+        "shipping_address": {
+            "street": "28370 Kathleen Ways Suite 337",
+            "city": "North Nathanport",
+            "state": "AS",
+            "zip_code": "38253"
+        }
+    },
+    {
+        "order_id": "f84319db-c98d-444c-a536-1d45c1902d77",
+        "customer_id": "c5a6cfcd-a619-4a35-a9fa-d0849daa0d22",
+        "timestamp": "2026-05-21T18:23:37.395929",
+        "status": "cancelled",
+        "total_amount": 289.98,
+        "items": [
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            },
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            }
+        ],
+        "shipping_address": {
+            "street": "94954 Gonzalez Pines",
+            "city": "Williamsside",
+            "state": "AL",
+            "zip_code": "59371"
+        }
+    },
+    {
+        "order_id": "ee38362e-42e6-41f5-b5d2-89ac8a9c239b",
+        "customer_id": "58dcd36b-a800-4780-b62c-f3174ac91450",
+        "timestamp": "2026-04-12T18:23:37.395929",
+        "status": "returned",
+        "total_amount": 349.99,
+        "items": [
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            }
+        ],
+        "shipping_address": {
+            "street": "99376 Derek Points Apt. 842",
+            "city": "South Victoria",
+            "state": "AK",
+            "zip_code": "14087"
+        }
+    },
+    {
+        "order_id": "3c833094-9270-4693-bae6-d970da9dc3c5",
+        "customer_id": "bca75feb-9944-4eaa-99ee-620924292b1b",
+        "timestamp": "2026-05-02T18:23:37.396933",
+        "status": "delivered",
+        "total_amount": 145.99,
+        "items": [
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            },
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            }
+        ],
+        "shipping_address": {
+            "street": "8202 Daniel Knoll Apt. 753",
+            "city": "Lynnland",
+            "state": "CO",
+            "zip_code": "32579"
+        }
+    },
+    {
+        "order_id": "8c657a3c-808b-4920-945c-8443698c8b97",
+        "customer_id": "3a30e98a-b415-4283-af85-5a8e0f2f4ecd",
+        "timestamp": "2026-05-29T18:23:37.396933",
+        "status": "delivered",
+        "total_amount": 25.99,
+        "items": [
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            }
+        ],
+        "shipping_address": {
+            "street": "718 Mason Fords Apt. 602",
+            "city": "Lake Michael",
+            "state": "OH",
+            "zip_code": "53960"
+        }
+    },
+    {
+        "order_id": "55e430dc-7137-4940-a625-1c0a0cb7748c",
+        "customer_id": "f89d59f8-b909-412e-a636-5c12d1bd2af2",
+        "timestamp": "2026-04-17T18:23:37.396933",
+        "status": "cancelled",
+        "total_amount": 594.98,
+        "items": [
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            },
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            },
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            }
+        ],
+        "shipping_address": {
+            "street": "9741 Jonathan Haven Apt. 150",
+            "city": "Lake Connor",
+            "state": "VT",
+            "zip_code": "49800"
+        }
+    },
+    {
+        "order_id": "431cbfab-edd6-4369-9314-eae6c20e9abe",
+        "customer_id": "a7f240cf-ea32-45d9-8e7b-f1a9b13eac3e",
+        "timestamp": "2026-05-24T18:23:37.397933",
+        "status": "delivered",
+        "total_amount": 115.98,
+        "items": [
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            },
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            }
+        ],
+        "shipping_address": {
+            "street": "3382 Baxter Lights Suite 441",
+            "city": "Daughertytown",
+            "state": "WA",
+            "zip_code": "39992"
+        }
+    },
+    {
+        "order_id": "2620db89-015a-4f9b-bf6c-4884f189f7e8",
+        "customer_id": "0c23ac7b-db3a-4214-974a-59f743da149c",
+        "timestamp": "2026-04-25T18:23:37.397933",
+        "status": "in-transit",
+        "total_amount": 364.99,
+        "items": [
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            },
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            },
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            }
+        ],
+        "shipping_address": {
+            "street": "195 Jones Square",
+            "city": "Jacobville",
+            "state": "CA",
+            "zip_code": "75085"
+        }
+    },
+    {
+        "order_id": "c4b3bdc7-2a5b-49eb-a21b-64eb707a2506",
+        "customer_id": "2a7cb49f-7739-4ef6-ba1c-343be95b10e0",
+        "timestamp": "2026-06-05T18:23:37.397933",
+        "status": "delivered",
+        "total_amount": 575.97,
+        "items": [
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            },
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            },
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            }
+        ],
+        "shipping_address": {
+            "street": "23939 Vargas Run Suite 372",
+            "city": "Fieldsville",
+            "state": "PW",
+            "zip_code": "76073"
+        }
+    },
+    {
+        "order_id": "3d91b21d-0425-4a67-bc27-9f5363ce6543",
+        "customer_id": "1dbdcff1-336c-4dcf-905d-2371913a9545",
+        "timestamp": "2026-05-02T18:23:37.398933",
+        "status": "in-transit",
+        "total_amount": 484.98,
+        "items": [
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            },
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            },
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            }
+        ],
+        "shipping_address": {
+            "street": "374 Watson Shore Suite 382",
+            "city": "Kyleland",
+            "state": "ID",
+            "zip_code": "23225"
+        }
+    },
+    {
+        "order_id": "ac3181dc-4b66-457e-9ea9-891cebf41c00",
+        "customer_id": "8d30ae08-112c-4f65-a0e8-803913f5c385",
+        "timestamp": "2026-05-16T18:23:37.398933",
+        "status": "cancelled",
+        "total_amount": 575.97,
+        "items": [
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            },
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            },
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            }
+        ],
+        "shipping_address": {
+            "street": "8801 Thomas Course",
+            "city": "Tiffanystad",
+            "state": "GU",
+            "zip_code": "22579"
+        }
+    },
+    {
+        "order_id": "359d2d19-f8aa-4e77-91c8-5a4104f88ef5",
+        "customer_id": "f01a0ef3-92d0-44ad-b8ac-50e6dc2a27bb",
+        "timestamp": "2026-05-07T18:23:37.398933",
+        "status": "returned",
+        "total_amount": 639.97,
+        "items": [
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            },
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            },
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            }
+        ],
+        "shipping_address": {
+            "street": "8186 Tony Crest",
+            "city": "New Larry",
+            "state": "ND",
+            "zip_code": "63687"
+        }
+    },
+    {
+        "order_id": "933ab055-b936-4a3e-9594-e5e2c4433618",
+        "customer_id": "ac4d3c21-b3b5-4f45-b54a-2fd70db0e04d",
+        "timestamp": "2026-04-15T18:23:37.398933",
+        "status": "in-transit",
+        "total_amount": 25.99,
+        "items": [
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            }
+        ],
+        "shipping_address": {
+            "street": "83645 Cook Pike",
+            "city": "South Randall",
+            "state": "WI",
+            "zip_code": "05218"
+        }
+    },
+    {
+        "order_id": "49635b17-22b8-489a-8a0b-950207e0e14e",
+        "customer_id": "9d2ce96e-85a3-4f75-841f-ff727c66751e",
+        "timestamp": "2026-04-25T18:23:37.399933",
+        "status": "returned",
+        "total_amount": 134.99,
+        "items": [
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            },
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            }
+        ],
+        "shipping_address": {
+            "street": "481 Cynthia Mission Suite 780",
+            "city": "Anthonychester",
+            "state": "KS",
+            "zip_code": "01933"
+        }
+    },
+    {
+        "order_id": "b2fbbba8-d3b5-4d3a-9783-3f3b9e8d2807",
+        "customer_id": "569a2d9e-e6a3-4013-b798-abe1add80160",
+        "timestamp": "2026-06-08T18:23:37.399933",
+        "status": "in-transit",
+        "total_amount": 145.99,
+        "items": [
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            },
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            }
+        ],
+        "shipping_address": {
+            "street": "7354 Mooney Summit Apt. 425",
+            "city": "Fischerburgh",
+            "state": "FL",
+            "zip_code": "84588"
+        }
+    },
+    {
+        "order_id": "7f31a313-3ba8-42ff-b36b-ac3405518f91",
+        "customer_id": "ea284174-4e05-4a0d-a005-25b8011be61d",
+        "timestamp": "2026-06-05T18:23:37.399933",
+        "status": "delivered",
+        "total_amount": 199.99,
+        "items": [
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            }
+        ],
+        "shipping_address": {
+            "street": "9215 Peter Orchard",
+            "city": "North Candace",
+            "state": "AL",
+            "zip_code": "26630"
+        }
+    },
+    {
+        "order_id": "24eb14ff-9f31-4e96-939b-c0014e5403c5",
+        "customer_id": "1d698169-0657-45f0-ae0c-261abdf1b6cc",
+        "timestamp": "2026-04-25T18:23:37.400934",
+        "status": "in-transit",
+        "total_amount": 254.99,
+        "items": [
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            },
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            },
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            }
+        ],
+        "shipping_address": {
+            "street": "2517 Jade Estates",
+            "city": "Goodville",
+            "state": "DC",
+            "zip_code": "35001"
+        }
+    },
+    {
+        "order_id": "e5496fb2-4fb0-4117-bf92-8df5e7de93b5",
+        "customer_id": "799831ee-2a7e-4019-b822-ecc56a9836b0",
+        "timestamp": "2026-04-23T18:23:37.400934",
+        "status": "in-transit",
+        "total_amount": 244.99,
+        "items": [
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            },
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            }
+        ],
+        "shipping_address": {
+            "street": "062 Matthew Common",
+            "city": "Landryhaven",
+            "state": "WI",
+            "zip_code": "63235"
+        }
+    },
+    {
+        "order_id": "20d55a31-c3fb-4889-aa34-385717980913",
+        "customer_id": "54c8c1b0-7780-44af-adfc-28de69773fe3",
+        "timestamp": "2026-05-04T18:23:37.400934",
+        "status": "delivered",
+        "total_amount": 45.0,
+        "items": [
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            }
+        ],
+        "shipping_address": {
+            "street": "66402 Tina Road",
+            "city": "Wilcoxstad",
+            "state": "SD",
+            "zip_code": "40644"
+        }
+    },
+    {
+        "order_id": "cbfe56e1-32c2-4a5b-9a63-3e0e457253fa",
+        "customer_id": "6fbc6aee-9b12-4213-aed0-1d8ced9e3b48",
+        "timestamp": "2026-05-31T18:23:37.402020",
+        "status": "delivered",
+        "total_amount": 409.98,
+        "items": [
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            },
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            },
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            }
+        ],
+        "shipping_address": {
+            "street": "973 Pena Squares",
+            "city": "West Monica",
+            "state": "MO",
+            "zip_code": "46108"
+        }
+    },
+    {
+        "order_id": "02cfd4fe-0f18-4535-b6a6-d26b85469b75",
+        "customer_id": "fd43768e-daba-4408-a240-4e20cb8bf046",
+        "timestamp": "2026-05-10T18:23:37.402020",
+        "status": "delivered",
+        "total_amount": 190.99,
+        "items": [
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            },
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            },
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            }
+        ],
+        "shipping_address": {
+            "street": "35509 White Vista",
+            "city": "Austintown",
+            "state": "MN",
+            "zip_code": "34918"
+        }
+    },
+    {
+        "order_id": "00aea6e2-03f5-4819-856a-9d45f41d33dc",
+        "customer_id": "6e7d3f64-18c9-4fa6-b7b8-7f3d92f7e182",
+        "timestamp": "2026-04-26T18:23:37.403025",
+        "status": "cancelled",
+        "total_amount": 465.97,
+        "items": [
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            },
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            },
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            }
+        ],
+        "shipping_address": {
+            "street": "1505 Nelson Drive Apt. 212",
+            "city": "Lake Stephaniemouth",
+            "state": "GA",
+            "zip_code": "53348"
+        }
+    },
+    {
+        "order_id": "a8b908ed-0e2c-4295-aa1d-9268cda70c70",
+        "customer_id": "341b25b8-8f95-4228-9637-9d444136706b",
+        "timestamp": "2026-05-23T18:23:37.403025",
+        "status": "delivered",
+        "total_amount": 160.98,
+        "items": [
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            },
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            },
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            }
+        ],
+        "shipping_address": {
+            "street": "601 Young Keys",
+            "city": "Morganberg",
+            "state": "DC",
+            "zip_code": "37687"
+        }
+    },
+    {
+        "order_id": "75bfc8f6-b9c5-4a93-8909-bbbc6308a390",
+        "customer_id": "d71785bb-9d51-438b-afbc-406c73b93d84",
+        "timestamp": "2026-05-27T18:23:37.403025",
+        "status": "in-transit",
+        "total_amount": 349.99,
+        "items": [
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            }
+        ],
+        "shipping_address": {
+            "street": "3878 Mason Springs",
+            "city": "Hancockborough",
+            "state": "WY",
+            "zip_code": "68707"
+        }
+    },
+    {
+        "order_id": "15b6f6b8-c934-4c29-b880-831b67915253",
+        "customer_id": "04162f70-032d-4ced-882c-1a9a5ba1c2d0",
+        "timestamp": "2026-05-09T18:23:37.403025",
+        "status": "delivered",
+        "total_amount": 165.0,
+        "items": [
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            },
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            }
+        ],
+        "shipping_address": {
+            "street": "4665 Sanchez Fort Apt. 837",
+            "city": "Blackwellfort",
+            "state": "WA",
+            "zip_code": "11629"
+        }
+    },
+    {
+        "order_id": "6c420287-3330-4b24-856b-e90e850e5062",
+        "customer_id": "9d2b0465-be0c-4727-b497-b2b9470bc203",
+        "timestamp": "2026-05-18T18:23:37.404414",
+        "status": "delivered",
+        "total_amount": 160.98,
+        "items": [
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            },
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            },
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            }
+        ],
+        "shipping_address": {
+            "street": "0734 Patrick Lane",
+            "city": "Jaredbury",
+            "state": "NJ",
+            "zip_code": "10703"
+        }
+    },
+    {
+        "order_id": "85a8eb2a-4ee4-4f4b-962e-0287d508498c",
+        "customer_id": "a1c75239-0126-48f1-8738-32e3dd961d3e",
+        "timestamp": "2026-06-08T18:23:37.404414",
+        "status": "cancelled",
+        "total_amount": 495.98,
+        "items": [
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            },
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            },
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            }
+        ],
+        "shipping_address": {
+            "street": "3455 Tanner Court",
+            "city": "Lake Roger",
+            "state": "FM",
+            "zip_code": "41759"
+        }
+    },
+    {
+        "order_id": "0efef7ac-ced5-48d4-b0a2-f81677c62b2b",
+        "customer_id": "1aab7dc8-ed01-46d0-af54-02654d0b247a",
+        "timestamp": "2026-05-23T18:23:37.404414",
+        "status": "delivered",
+        "total_amount": 549.98,
+        "items": [
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            },
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            }
+        ],
+        "shipping_address": {
+            "street": "1512 Kimberly Roads Suite 924",
+            "city": "Kevinbury",
+            "state": "MT",
+            "zip_code": "29398"
+        }
+    },
+    {
+        "order_id": "afed17db-5687-4bad-ac9f-fb37f39101d4",
+        "customer_id": "c3cb7292-ae4e-4b33-9fc5-78094abf1c57",
+        "timestamp": "2026-05-13T18:23:37.404414",
+        "status": "cancelled",
+        "total_amount": 89.99,
+        "items": [
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            }
+        ],
+        "shipping_address": {
+            "street": "3801 John Point Suite 414",
+            "city": "West Matthew",
+            "state": "WI",
+            "zip_code": "59043"
+        }
+    },
+    {
+        "order_id": "bc975d0c-60a9-4975-9cf2-5278acad2b2b",
+        "customer_id": "a219737a-ba06-465d-95c9-cef932405648",
+        "timestamp": "2026-06-07T18:23:37.405520",
+        "status": "delivered",
+        "total_amount": 319.99,
+        "items": [
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            },
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            }
+        ],
+        "shipping_address": {
+            "street": "773 Lisa Curve Suite 053",
+            "city": "Brianchester",
+            "state": "MT",
+            "zip_code": "51097"
+        }
+    },
+    {
+        "order_id": "3c759899-9c71-4dc6-a57f-d0e16c1929aa",
+        "customer_id": "715af74b-e548-4ad9-a3e5-fde8eced6979",
+        "timestamp": "2026-04-12T18:23:37.405520",
+        "status": "returned",
+        "total_amount": 145.99,
+        "items": [
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            },
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            }
+        ],
+        "shipping_address": {
+            "street": "35223 Lisa Trace",
+            "city": "Olsenton",
+            "state": "AL",
+            "zip_code": "34663"
+        }
+    },
+    {
+        "order_id": "c6c9b1ec-d8a8-48c0-b3af-143e5440e8f7",
+        "customer_id": "b36ffc80-db4e-4695-81bd-9c8bbb2193a2",
+        "timestamp": "2026-04-15T18:23:37.405520",
+        "status": "returned",
+        "total_amount": 594.98,
+        "items": [
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            },
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            },
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            }
+        ],
+        "shipping_address": {
+            "street": "0252 Moore Extensions",
+            "city": "Julieport",
+            "state": "FL",
+            "zip_code": "19108"
+        }
+    },
+    {
+        "order_id": "1092bb32-9db4-4073-9312-1ba13aabc51d",
+        "customer_id": "92041afe-2fe9-4793-bfc0-78f54abd7942",
+        "timestamp": "2026-05-25T18:23:37.406634",
+        "status": "returned",
+        "total_amount": 319.99,
+        "items": [
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            },
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            }
+        ],
+        "shipping_address": {
+            "street": "71152 Amanda Fork",
+            "city": "Dianehaven",
+            "state": "IL",
+            "zip_code": "96494"
+        }
+    },
+    {
+        "order_id": "98420278-8e56-4122-a419-d925e37d1a6f",
+        "customer_id": "1b345821-5b9b-4147-83a8-234c8c6ba698",
+        "timestamp": "2026-04-19T18:23:37.406634",
+        "status": "in-transit",
+        "total_amount": 160.98,
+        "items": [
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            },
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            },
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            }
+        ],
+        "shipping_address": {
+            "street": "44879 Morrow Camp Suite 492",
+            "city": "Lake Veronica",
+            "state": "MO",
+            "zip_code": "35075"
+        }
+    },
+    {
+        "order_id": "53596b46-4758-40c7-9d0f-1a9efb965aa3",
+        "customer_id": "e27284a0-02ea-4dca-9487-b024326fa7bd",
+        "timestamp": "2026-05-23T18:23:37.406634",
+        "status": "returned",
+        "total_amount": 199.99,
+        "items": [
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            }
+        ],
+        "shipping_address": {
+            "street": "023 Gordon Camp",
+            "city": "Lake Jonathan",
+            "state": "NH",
+            "zip_code": "75535"
+        }
+    },
+    {
+        "order_id": "4df55c78-2ae3-4b36-8686-fd4a0f829fad",
+        "customer_id": "f2af97ff-949d-4040-9b39-71a5fabdbd60",
+        "timestamp": "2026-05-21T18:23:37.407857",
+        "status": "delivered",
+        "total_amount": 254.99,
+        "items": [
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            },
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            },
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            }
+        ],
+        "shipping_address": {
+            "street": "327 Juan Union",
+            "city": "Russellbury",
+            "state": "GA",
+            "zip_code": "15776"
+        }
+    },
+    {
+        "order_id": "21239807-e2bd-4b93-ae8f-776e59b7edd5",
+        "customer_id": "30248f58-1404-46e6-95fa-ad868b9f0f22",
+        "timestamp": "2026-05-31T18:23:37.407857",
+        "status": "cancelled",
+        "total_amount": 319.99,
+        "items": [
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            },
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            }
+        ],
+        "shipping_address": {
+            "street": "98123 Virginia Flat Apt. 855",
+            "city": "Griffinport",
+            "state": "NJ",
+            "zip_code": "55032"
+        }
+    },
+    {
+        "order_id": "0db20103-fab2-4e75-a03c-c3638fde22a3",
+        "customer_id": "e4bc0cd3-b828-45ec-9303-26d7bde3a09e",
+        "timestamp": "2026-04-16T18:23:37.407857",
+        "status": "cancelled",
+        "total_amount": 364.99,
+        "items": [
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            },
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            },
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            }
+        ],
+        "shipping_address": {
+            "street": "094 Ross Row Apt. 470",
+            "city": "Michaelmouth",
+            "state": "NV",
+            "zip_code": "80473"
+        }
+    },
+    {
+        "order_id": "98f8dd83-d31d-4d0e-a25f-f27ef07c7e8a",
+        "customer_id": "00a7e0ca-f8da-4bf1-b18a-5a02b136708c",
+        "timestamp": "2026-05-04T18:23:37.407857",
+        "status": "returned",
+        "total_amount": 549.98,
+        "items": [
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            },
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            }
+        ],
+        "shipping_address": {
+            "street": "22569 David Wall Suite 240",
+            "city": "Teresafort",
+            "state": "MO",
+            "zip_code": "09325"
+        }
+    },
+    {
+        "order_id": "8a069d26-9b5c-42a8-9158-1b6a48b63861",
+        "customer_id": "d8e4e942-79b7-4569-a791-d3baefdc6de3",
+        "timestamp": "2026-04-12T18:23:37.408887",
+        "status": "delayed",
+        "total_amount": 225.98,
+        "items": [
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            },
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            }
+        ],
+        "shipping_address": {
+            "street": "1304 Christina Mountains Apt. 304",
+            "city": "East Christyshire",
+            "state": "AR",
+            "zip_code": "58949"
+        }
+    },
+    {
+        "order_id": "838744aa-e2cd-41eb-ae44-796b08c41ae8",
+        "customer_id": "84088572-ceed-461c-9f18-a8d0b5678b42",
+        "timestamp": "2026-04-12T18:23:37.408887",
+        "status": "delayed",
+        "total_amount": 25.99,
+        "items": [
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            }
+        ],
+        "shipping_address": {
+            "street": "75057 Jamie Point Apt. 335",
+            "city": "New Tiffanychester",
+            "state": "CT",
+            "zip_code": "19391"
+        }
+    },
+    {
+        "order_id": "38c56428-8104-4b10-85f0-645d68418e0d",
+        "customer_id": "7552c486-ad75-40bf-856f-06a90881be3b",
+        "timestamp": "2026-06-06T18:23:37.408887",
+        "status": "cancelled",
+        "total_amount": 244.99,
+        "items": [
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            },
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            }
+        ],
+        "shipping_address": {
+            "street": "0588 Phillip River",
+            "city": "Juliaberg",
+            "state": "OH",
+            "zip_code": "63944"
+        }
+    },
+    {
+        "order_id": "499a01a6-0855-4ca7-926b-5e5c5543e5e9",
+        "customer_id": "7bf00150-a41d-4fd3-8636-97d6a45e4235",
+        "timestamp": "2026-05-09T18:23:37.409919",
+        "status": "cancelled",
+        "total_amount": 120.0,
+        "items": [
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            }
+        ],
+        "shipping_address": {
+            "street": "4590 Isabella Forest Suite 371",
+            "city": "Kathrynburgh",
+            "state": "FM",
+            "zip_code": "52457"
+        }
+    },
+    {
+        "order_id": "ef6c8dff-5dd1-4be5-a45c-6c4fff3a96ff",
+        "customer_id": "55fa9290-ed96-47f1-a2d1-ea641394bf40",
+        "timestamp": "2026-06-07T18:23:37.409919",
+        "status": "delivered",
+        "total_amount": 669.98,
+        "items": [
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            },
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            },
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            }
+        ],
+        "shipping_address": {
+            "street": "076 Angela Brooks Suite 642",
+            "city": "Georgeshire",
+            "state": "ME",
+            "zip_code": "24366"
+        }
+    },
+    {
+        "order_id": "9b41dae4-a6d7-44ab-aed0-8c85e8a203cb",
+        "customer_id": "74db8d4a-1538-408e-8d92-0e5863bc86a3",
+        "timestamp": "2026-04-30T18:23:37.409919",
+        "status": "returned",
+        "total_amount": 209.99,
+        "items": [
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            },
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            }
+        ],
+        "shipping_address": {
+            "street": "82537 Weber Keys Apt. 036",
+            "city": "North Victor",
+            "state": "WI",
+            "zip_code": "50400"
+        }
+    },
+    {
+        "order_id": "2c26c9f4-f455-42b3-916b-4dd8c3e2bb47",
+        "customer_id": "fbb9607d-24d5-4173-aaaa-5359ec821c7c",
+        "timestamp": "2026-05-04T18:23:37.409919",
+        "status": "delayed",
+        "total_amount": 225.98,
+        "items": [
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            },
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            }
+        ],
+        "shipping_address": {
+            "street": "588 Mckenzie Prairie",
+            "city": "South Crystal",
+            "state": "RI",
+            "zip_code": "69483"
+        }
+    },
+    {
+        "order_id": "ebfea5ac-9a65-4a58-8be4-ca5096a75be6",
+        "customer_id": "42a5dcfc-cc7a-40a0-b3bf-1fc8bbd6c5f7",
+        "timestamp": "2026-04-11T18:23:37.410951",
+        "status": "in-transit",
+        "total_amount": 244.99,
+        "items": [
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            },
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            }
+        ],
+        "shipping_address": {
+            "street": "230 Christine Manors Suite 916",
+            "city": "West Andrewshire",
+            "state": "SD",
+            "zip_code": "55491"
+        }
+    },
+    {
+        "order_id": "64cd0c69-c8ed-45c8-b85c-ce7ab54b18d3",
+        "customer_id": "db00e938-9e90-4316-87ab-42c98bd606d8",
+        "timestamp": "2026-05-18T18:23:37.410951",
+        "status": "returned",
+        "total_amount": 209.99,
+        "items": [
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            },
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            }
+        ],
+        "shipping_address": {
+            "street": "841 Braun Forest",
+            "city": "Lopezstad",
+            "state": "LA",
+            "zip_code": "70478"
+        }
+    },
+    {
+        "order_id": "2eb80fb5-bd59-445f-8f32-bcba4a5c2678",
+        "customer_id": "b2a55eaf-9f38-4a2d-90b0-3e1344cfc35d",
+        "timestamp": "2026-05-02T18:23:37.410951",
+        "status": "in-transit",
+        "total_amount": 420.98,
+        "items": [
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            },
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            },
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            }
+        ],
+        "shipping_address": {
+            "street": "09425 Shannon Junctions",
+            "city": "North Mary",
+            "state": "PW",
+            "zip_code": "25621"
+        }
+    },
+    {
+        "order_id": "61301f5f-e63a-448d-aca5-bee3ac947031",
+        "customer_id": "45187c9b-c97c-4fee-9331-2c7806453596",
+        "timestamp": "2026-05-27T18:23:37.411984",
+        "status": "delivered",
+        "total_amount": 270.98,
+        "items": [
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            },
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            },
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            }
+        ],
+        "shipping_address": {
+            "street": "8717 Baker Summit",
+            "city": "West Molly",
+            "state": "AZ",
+            "zip_code": "75528"
+        }
+    },
+    {
+        "order_id": "a072e745-56e5-4fd4-8b95-a59c519a7458",
+        "customer_id": "56b87427-812f-41fd-97f5-87abecd3a889",
+        "timestamp": "2026-05-02T18:23:37.411984",
+        "status": "returned",
+        "total_amount": 345.98,
+        "items": [
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            },
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            },
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            }
+        ],
+        "shipping_address": {
+            "street": "402 Mitchell Loaf",
+            "city": "North Julia",
+            "state": "AK",
+            "zip_code": "56253"
+        }
+    },
+    {
+        "order_id": "f7d5aa25-7581-478d-a2ce-769bca349fd2",
+        "customer_id": "e9fabde6-e91a-4ba1-b0d4-84f5c4df5456",
+        "timestamp": "2026-04-12T18:23:37.411984",
+        "status": "in-transit",
+        "total_amount": 315.97,
+        "items": [
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            },
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            },
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            }
+        ],
+        "shipping_address": {
+            "street": "2343 Green Islands Suite 151",
+            "city": "West Timothystad",
+            "state": "NC",
+            "zip_code": "18541"
+        }
+    },
+    {
+        "order_id": "e34ff5c1-d354-4536-a33a-98937ef8ce2f",
+        "customer_id": "84cfd6a7-42b1-4afe-8b54-85a969bdcef1",
+        "timestamp": "2026-05-02T18:23:37.413091",
+        "status": "in-transit",
+        "total_amount": 594.98,
+        "items": [
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            },
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            },
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            }
+        ],
+        "shipping_address": {
+            "street": "455 Vanessa Track",
+            "city": "Alvaradoport",
+            "state": "CT",
+            "zip_code": "82192"
+        }
+    },
+    {
+        "order_id": "a5fddca5-2602-4864-b0be-b6a0f21f5769",
+        "customer_id": "70607861-8772-4d92-91af-2e5f4d4e5396",
+        "timestamp": "2026-04-12T18:23:37.413091",
+        "status": "delayed",
+        "total_amount": 270.98,
+        "items": [
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            },
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            },
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            }
+        ],
+        "shipping_address": {
+            "street": "1197 Frederick Manor",
+            "city": "Bergfurt",
+            "state": "AZ",
+            "zip_code": "70562"
+        }
+    },
+    {
+        "order_id": "1277fe96-1dae-49d8-80d3-455a2a472e3e",
+        "customer_id": "ef64945f-6141-4787-b364-31c170032411",
+        "timestamp": "2026-05-27T18:23:37.413091",
+        "status": "in-transit",
+        "total_amount": 199.99,
+        "items": [
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            }
+        ],
+        "shipping_address": {
+            "street": "12504 Caroline Mill",
+            "city": "Carrview",
+            "state": "PR",
+            "zip_code": "49993"
+        }
+    },
+    {
+        "order_id": "e8eb95ea-317d-446a-95cc-831513cf4a2d",
+        "customer_id": "b2481e89-ffa5-438d-aa81-af48c7134b50",
+        "timestamp": "2026-05-22T18:23:37.413091",
+        "status": "delivered",
+        "total_amount": 394.99,
+        "items": [
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            },
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            }
+        ],
+        "shipping_address": {
+            "street": "398 Robinson Freeway Suite 670",
+            "city": "Nguyenland",
+            "state": "FL",
+            "zip_code": "64354"
+        }
+    },
+    {
+        "order_id": "f582ea0e-451b-4a91-86b6-eff68f0cbafa",
+        "customer_id": "1032b7fd-6dd6-4a29-b547-6d193b1bc0dd",
+        "timestamp": "2026-06-01T18:23:37.414091",
+        "status": "delivered",
+        "total_amount": 209.99,
+        "items": [
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            },
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            }
+        ],
+        "shipping_address": {
+            "street": "111 Wilcox Ranch Apt. 216",
+            "city": "Port Leetown",
+            "state": "AL",
+            "zip_code": "85302"
+        }
+    },
+    {
+        "order_id": "de03ee40-4816-4dcd-a9b1-9c38f6dcdf54",
+        "customer_id": "cc91ad6f-e5cc-44d1-a32f-d80f357b36ad",
+        "timestamp": "2026-05-20T18:23:37.414091",
+        "status": "cancelled",
+        "total_amount": 45.0,
+        "items": [
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            }
+        ],
+        "shipping_address": {
+            "street": "067 Martin Plain",
+            "city": "Bradleyville",
+            "state": "ID",
+            "zip_code": "12685"
+        }
+    },
+    {
+        "order_id": "725d2c1f-b6a8-466c-bf28-f3db36026973",
+        "customer_id": "09d9d427-ed54-48a4-a7ab-926f9951f352",
+        "timestamp": "2026-04-15T18:23:37.414091",
+        "status": "delayed",
+        "total_amount": 120.0,
+        "items": [
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            }
+        ],
+        "shipping_address": {
+            "street": "67488 Brian Greens Apt. 708",
+            "city": "North Lauraborough",
+            "state": "WV",
+            "zip_code": "74328"
+        }
+    },
+    {
+        "order_id": "22a6331f-4ca9-40e4-8c98-121603e55437",
+        "customer_id": "8577a1af-21a9-43d5-b1e8-39afe754705e",
+        "timestamp": "2026-04-23T18:23:37.415091",
+        "status": "cancelled",
+        "total_amount": 345.98,
+        "items": [
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            },
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            },
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            }
+        ],
+        "shipping_address": {
+            "street": "8027 Maldonado Port",
+            "city": "Huntchester",
+            "state": "MN",
+            "zip_code": "83626"
+        }
+    },
+    {
+        "order_id": "4e042003-a34f-49c4-92aa-16091cf15b00",
+        "customer_id": "2c1904a2-bac4-4f5d-bba3-94e340f80173",
+        "timestamp": "2026-05-22T18:23:37.415091",
+        "status": "returned",
+        "total_amount": 549.98,
+        "items": [
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            },
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            }
+        ],
+        "shipping_address": {
+            "street": "82004 Bowman Walk",
+            "city": "Martinezfurt",
+            "state": "SC",
+            "zip_code": "09237"
+        }
+    },
+    {
+        "order_id": "bf3c439e-b3cd-41dc-b2cb-5a5efa428640",
+        "customer_id": "2dd2747c-19f7-430f-bf3c-0a2cbb6ac776",
+        "timestamp": "2026-05-21T18:23:37.416092",
+        "status": "delayed",
+        "total_amount": 120.0,
+        "items": [
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            }
+        ],
+        "shipping_address": {
+            "street": "05184 Keith Freeway",
+            "city": "North Joshuamouth",
+            "state": "MN",
+            "zip_code": "34466"
+        }
+    },
+    {
+        "order_id": "62217d7d-307b-4811-b71d-5469213eb47b",
+        "customer_id": "5734b4ef-6569-450d-b3f2-161af198ae33",
+        "timestamp": "2026-05-26T18:23:37.416092",
+        "status": "returned",
+        "total_amount": 394.99,
+        "items": [
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            },
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            }
+        ],
+        "shipping_address": {
+            "street": "845 Delacruz Prairie",
+            "city": "East Sharon",
+            "state": "SC",
+            "zip_code": "49253"
+        }
+    },
+    {
+        "order_id": "abb3894f-165a-4259-a12d-5253c0a0e83c",
+        "customer_id": "64e7e860-1df4-4e13-ae64-164f2ca09d8a",
+        "timestamp": "2026-05-13T18:23:37.416092",
+        "status": "returned",
+        "total_amount": 25.99,
+        "items": [
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            }
+        ],
+        "shipping_address": {
+            "street": "828 Russell Village",
+            "city": "Millerville",
+            "state": "NH",
+            "zip_code": "95043"
+        }
+    },
+    {
+        "order_id": "a517ebef-e40e-4dc8-ab8f-e44df5fdc912",
+        "customer_id": "86707db6-ee1b-41ce-b6e9-36f4c75dfd9a",
+        "timestamp": "2026-06-04T18:23:37.417092",
+        "status": "delayed",
+        "total_amount": 420.98,
+        "items": [
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            },
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            },
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            }
+        ],
+        "shipping_address": {
+            "street": "7977 Small Freeway Suite 904",
+            "city": "Allenside",
+            "state": "MN",
+            "zip_code": "87479"
+        }
+    },
+    {
+        "order_id": "07b51c87-d8ad-4cfe-b2f1-6cd8b88ed11f",
+        "customer_id": "1d314495-7793-470d-8ed2-19b471ea2db7",
+        "timestamp": "2026-04-11T18:23:37.417092",
+        "status": "in-transit",
+        "total_amount": 120.0,
+        "items": [
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            }
+        ],
+        "shipping_address": {
+            "street": "71208 Tracy Hill Suite 193",
+            "city": "Evansfurt",
+            "state": "SC",
+            "zip_code": "38581"
+        }
+    },
+    {
+        "order_id": "d53dbd44-fd27-4c67-b1f9-ec0e1343bb67",
+        "customer_id": "fc27005b-1636-4028-8d31-d5c819944ab4",
+        "timestamp": "2026-04-11T18:23:37.417092",
+        "status": "delayed",
+        "total_amount": 70.99,
+        "items": [
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            },
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            }
+        ],
+        "shipping_address": {
+            "street": "8061 Lewis Causeway",
+            "city": "Port Shawn",
+            "state": "KS",
+            "zip_code": "21638"
+        }
+    },
+    {
+        "order_id": "eae9cd87-b02b-48a0-82f3-a972cc6d93e1",
+        "customer_id": "e229f390-a300-498e-b306-85dc362cf17e",
+        "timestamp": "2026-04-30T18:23:37.418093",
+        "status": "in-transit",
+        "total_amount": 575.97,
+        "items": [
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            },
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            },
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            }
+        ],
+        "shipping_address": {
+            "street": "58761 Karen Trail",
+            "city": "Joelchester",
+            "state": "FM",
+            "zip_code": "26090"
+        }
+    },
+    {
+        "order_id": "b974f566-eab2-4803-a4a8-9f79c31883c2",
+        "customer_id": "0ec0708d-8d83-423e-a8ad-aac2c6b09a5c",
+        "timestamp": "2026-04-29T18:23:37.418093",
+        "status": "in-transit",
+        "total_amount": 244.99,
+        "items": [
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            },
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            }
+        ],
+        "shipping_address": {
+            "street": "7519 Jessica Creek",
+            "city": "Payneborough",
+            "state": "TN",
+            "zip_code": "81981"
+        }
+    },
+    {
+        "order_id": "05056023-9bc1-4aa6-8484-83ab61ff3efb",
+        "customer_id": "6cf4d8ec-9694-473d-a0b9-7fef5b8c23e4",
+        "timestamp": "2026-04-17T18:23:37.419092",
+        "status": "returned",
+        "total_amount": 120.0,
+        "items": [
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            }
+        ],
+        "shipping_address": {
+            "street": "781 Thomas Manors",
+            "city": "Lake Kellymouth",
+            "state": "SC",
+            "zip_code": "74756"
+        }
+    },
+    {
+        "order_id": "ea489e59-87da-4717-873b-33704ae97e01",
+        "customer_id": "26299533-2434-460b-a4d4-89fb6d2c65ef",
+        "timestamp": "2026-06-02T18:23:37.420093",
+        "status": "returned",
+        "total_amount": 244.99,
+        "items": [
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            },
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            }
+        ],
+        "shipping_address": {
+            "street": "1553 James Run",
+            "city": "Spencerchester",
+            "state": "WY",
+            "zip_code": "64215"
+        }
+    },
+    {
+        "order_id": "d0e503a3-34a3-483f-8797-686b4beda149",
+        "customer_id": "2898cf6e-b27b-4f85-99ec-cc7ab90ebc0d",
+        "timestamp": "2026-05-18T18:23:37.420093",
+        "status": "returned",
+        "total_amount": 669.98,
+        "items": [
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            },
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            },
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            }
+        ],
+        "shipping_address": {
+            "street": "6474 Hoffman Estate Suite 014",
+            "city": "Romeroland",
+            "state": "NC",
+            "zip_code": "75910"
+        }
+    },
+    {
+        "order_id": "daecc940-6b4d-4520-9bac-b779bf198337",
+        "customer_id": "81d8790c-66b0-4cf1-9783-5c65873734e5",
+        "timestamp": "2026-05-16T18:23:37.420093",
+        "status": "delayed",
+        "total_amount": 45.0,
+        "items": [
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            }
+        ],
+        "shipping_address": {
+            "street": "0411 Scott Orchard",
+            "city": "East Briannaport",
+            "state": "WI",
+            "zip_code": "90324"
+        }
+    },
+    {
+        "order_id": "6e5af9aa-b86c-4c5b-b5b3-f86f7bacddbe",
+        "customer_id": "a7aeb8c9-cc5a-4005-ade4-82ab212b3c5d",
+        "timestamp": "2026-05-30T18:23:37.421093",
+        "status": "delayed",
+        "total_amount": 349.99,
+        "items": [
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            }
+        ],
+        "shipping_address": {
+            "street": "134 Ward Stream",
+            "city": "East Sarah",
+            "state": "DE",
+            "zip_code": "09599"
+        }
+    },
+    {
+        "order_id": "a5340aff-9ac5-49a9-a28b-c73b5015f42c",
+        "customer_id": "d314c5d2-3299-4523-9ffe-73fde8b248c6",
+        "timestamp": "2026-05-26T18:23:37.421093",
+        "status": "delayed",
+        "total_amount": 244.99,
+        "items": [
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            },
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            }
+        ],
+        "shipping_address": {
+            "street": "40500 Horn Valley",
+            "city": "Wilsonborough",
+            "state": "TN",
+            "zip_code": "74827"
+        }
+    },
+    {
+        "order_id": "2989c096-0c0f-4acf-8d52-e9aedc56a053",
+        "customer_id": "a792bbd6-5cd8-4658-a779-9152cfc1da8b",
+        "timestamp": "2026-06-04T18:23:37.421093",
+        "status": "in-transit",
+        "total_amount": 465.97,
+        "items": [
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            },
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            },
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            }
+        ],
+        "shipping_address": {
+            "street": "591 Janice Cape Suite 064",
+            "city": "Michaelport",
+            "state": "MS",
+            "zip_code": "02548"
+        }
+    },
+    {
+        "order_id": "1647470e-4df7-46f6-b3b2-05529ef66dd0",
+        "customer_id": "6f31361f-a6da-4a96-a8b5-9b46941a9511",
+        "timestamp": "2026-04-23T18:23:37.422093",
+        "status": "delayed",
+        "total_amount": 575.97,
+        "items": [
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            },
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            },
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            }
+        ],
+        "shipping_address": {
+            "street": "709 Felicia Divide Suite 248",
+            "city": "Port Shannon",
+            "state": "SD",
+            "zip_code": "43250"
+        }
+    },
+    {
+        "order_id": "88f3c94d-e6a4-40ba-86e7-fcaac5db9a63",
+        "customer_id": "0dfc6ee7-71e3-4348-8d8f-2d812b6a498e",
+        "timestamp": "2026-05-02T18:23:37.422093",
+        "status": "returned",
+        "total_amount": 45.0,
+        "items": [
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            }
+        ],
+        "shipping_address": {
+            "street": "1032 Jesus Plains",
+            "city": "North Jon",
+            "state": "ME",
+            "zip_code": "72748"
+        }
+    },
+    {
+        "order_id": "fd36253b-7804-4799-a055-95e10fac4e41",
+        "customer_id": "19508954-ad79-4f0c-94f3-c0eb690b1233",
+        "timestamp": "2026-05-27T18:23:37.422093",
+        "status": "cancelled",
+        "total_amount": 349.99,
+        "items": [
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            }
+        ],
+        "shipping_address": {
+            "street": "815 Anthony Terrace Apt. 224",
+            "city": "New Lawrenceton",
+            "state": "MI",
+            "zip_code": "30599"
+        }
+    },
+    {
+        "order_id": "c4d97abb-5d81-4cb4-96c2-c8b6376ba8b3",
+        "customer_id": "742efd33-b1af-439f-946e-59f3d347d985",
+        "timestamp": "2026-06-08T18:23:37.422093",
+        "status": "delayed",
+        "total_amount": 190.99,
+        "items": [
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            },
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            },
+            {
+                "product_id": "P-1006",
+                "name": "USB-C Hub",
+                "price": 25.99
+            }
+        ],
+        "shipping_address": {
+            "street": "858 Garcia Stravenue Suite 276",
+            "city": "North Michael",
+            "state": "CA",
+            "zip_code": "28874"
+        }
+    },
+    {
+        "order_id": "f73cbeea-ad84-42ab-adc3-1e69a7775677",
+        "customer_id": "f6e0026f-73ab-4361-aa4c-1bea32a1df03",
+        "timestamp": "2026-05-11T18:23:37.423093",
+        "status": "in-transit",
+        "total_amount": 669.98,
+        "items": [
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            },
+            {
+                "product_id": "P-1005",
+                "name": "1TB NVMe SSD",
+                "price": 120.0
+            },
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            }
+        ],
+        "shipping_address": {
+            "street": "979 Jackie Landing Suite 286",
+            "city": "Hunterberg",
+            "state": "AS",
+            "zip_code": "07659"
+        }
+    },
+    {
+        "order_id": "50cbec0b-9fca-44d7-9023-34390aec12df",
+        "customer_id": "70781623-f807-47a3-b456-e03daebd2900",
+        "timestamp": "2026-05-10T18:23:37.423093",
+        "status": "in-transit",
+        "total_amount": 639.97,
+        "items": [
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            },
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            },
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            }
+        ],
+        "shipping_address": {
+            "street": "170 Leslie Skyway Suite 540",
+            "city": "East Ericton",
+            "state": "IA",
+            "zip_code": "69002"
+        }
+    },
+    {
+        "order_id": "c5224db3-84bf-4328-9f8a-bd5576587c82",
+        "customer_id": "b66ea5a2-05cf-4df3-8e4b-683a52b6c20d",
+        "timestamp": "2026-04-25T18:23:37.423093",
+        "status": "delayed",
+        "total_amount": 334.98,
+        "items": [
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            },
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            },
+            {
+                "product_id": "P-1001",
+                "name": "Wireless Noise-Canceling Headphones",
+                "price": 199.99
+            }
+        ],
+        "shipping_address": {
+            "street": "352 Justin Alley Suite 616",
+            "city": "Elizabethchester",
+            "state": "MO",
+            "zip_code": "94324"
+        }
+    },
+    {
+        "order_id": "4c278cc8-0c4e-4e08-b907-1d8b73dc18dd",
+        "customer_id": "a3b0b311-6e3b-4b01-ba3e-1418b511d1b9",
+        "timestamp": "2026-05-29T18:23:37.424094",
+        "status": "in-transit",
+        "total_amount": 484.98,
+        "items": [
+            {
+                "product_id": "P-1004",
+                "name": "Ergonomic Mouse",
+                "price": 45.0
+            },
+            {
+                "product_id": "P-1002",
+                "name": "Mechanical Gaming Keyboard",
+                "price": 89.99
+            },
+            {
+                "product_id": "P-1003",
+                "name": "27-inch 4K Monitor",
+                "price": 349.99
+            }
+        ],
+        "shipping_address": {
+            "street": "2642 Valdez Expressway Suite 698",
+            "city": "Port Elijahhaven",
+            "state": "AL",
+            "zip_code": "14274"
+        }
+    }
+]

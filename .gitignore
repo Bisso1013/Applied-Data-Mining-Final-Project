@@ -1,0 +1,13 @@
+venv/
+__pycache__/
+*.pyc
+.env
+.idea/
+.chroma/
+memory.db
+chat_sessions.json
+ragas_results.json
+*.egg-info/
+dist/
+build/
+.DS_Store
