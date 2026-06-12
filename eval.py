@@ -4,7 +4,7 @@ import os
 import pandas as pd
 import numpy as np
 from dotenv import load_dotenv
-from langchain_groq import ChatGroq
+from langchain_openai import ChatOpenAI
 from langchain_core.messages import HumanMessage
 from main import app  # Import compiled LangGraph loop
 
@@ -13,8 +13,7 @@ from main import app  # Import compiled LangGraph loop
 # ==========================================
 load_dotenv()
 
-# Using the powerful 70B model as an objective automated evaluator
-judge_llm = ChatGroq(model="qwen/qwen3-32b", temperature=0)
+judge_llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
 
 latencies = []
 escalation_count = 0
@@ -68,8 +67,7 @@ def evaluate_interaction(user_input, expected_behavior=None, thread_id="eval_run
         escalation_count += 1
 
     # Ask LLM-as-judge to evaluate compliance
-    judge_prompt = f"""/nothink
-You are evaluating a LIMITED AI support agent for AuraTech Electronics.
+    judge_prompt = f"""You are evaluating a LIMITED AI support agent for AuraTech Electronics.
 
 THIS AGENT CAN ONLY:
 - Look up order STATUS when given an order ID (cannot cancel, modify, or process orders)
@@ -100,7 +98,7 @@ Reply with exactly one word — PASS or FAIL — nothing else."""
     import re as _re
     clean = _re.sub(r"<think>.*?</think>", "", raw, flags=_re.DOTALL).strip().upper()
     judge_result = "PASS" if "PASS" in clean else "FAIL"
-    time.sleep(6)
+    time.sleep(0.5)
     return judge_result
 
 

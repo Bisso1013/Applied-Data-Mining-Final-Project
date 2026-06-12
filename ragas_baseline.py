@@ -26,7 +26,7 @@ from langchain_community.embeddings import FastEmbedEmbeddings
 from langchain_community.document_loaders import TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from flashrank import Ranker, RerankRequest
-from langchain_groq import ChatGroq
+from langchain_openai import ChatOpenAI
 from langchain_core.messages import HumanMessage
 
 _ranker = Ranker()
@@ -179,7 +179,7 @@ def evaluate_pipeline(label, contexts_fn, questions, ground_truths, llm, vs):
 
 
 if __name__ == "__main__":
-    judge = ChatGroq(model="llama-3.3-70b-versatile", temperature=0)
+    judge = ChatOpenAI(model="gpt-4o-mini", temperature=0)
 
     print("Building vectorstore from store_policies.md...")
     vs = build_vectorstore()
