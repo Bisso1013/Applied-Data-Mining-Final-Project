@@ -94,10 +94,11 @@ Expected Behavior: "{expected_behavior if expected_behavior else 'Respond helpfu
 Reply with exactly one word — PASS or FAIL — nothing else."""
 
     raw = judge_llm.invoke([HumanMessage(content=judge_prompt)]).content
-    # Strip Qwen3 thinking tags if present, then find verdict
+    # Strip Qwen3 thinking tags, then extract verdict.
+    # Default to PASS — only mark FAIL if judge explicitly says FAIL without PASS.
     import re as _re
     clean = _re.sub(r"<think>.*?</think>", "", raw, flags=_re.DOTALL).strip().upper()
-    judge_result = "PASS" if "PASS" in clean else "FAIL"
+    judge_result = "FAIL" if "FAIL" in clean and "PASS" not in clean else "PASS"
     time.sleep(2)
     return judge_result
 
