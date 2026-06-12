@@ -12,7 +12,7 @@ os.environ["HF_HUB_DISABLE_SYMLINKS"] = "1"
 
 from langchain_core.messages import HumanMessage, SystemMessage
 from langchain_core.documents import Document
-from langchain_openai import ChatOpenAI
+from langchain_groq import ChatGroq
 from langchain_community.document_loaders import TextLoader
 from langchain_community.embeddings import FastEmbedEmbeddings
 from langchain_community.vectorstores import Chroma
@@ -24,7 +24,7 @@ from langgraph.checkpoint.sqlite import SqliteSaver
 
 load_dotenv()
 
-llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
+llm = ChatGroq(model="llama-3.3-70b-versatile", temperature=0)
 
 
 # ==========================================

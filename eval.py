@@ -4,7 +4,7 @@ import os
 import pandas as pd
 import numpy as np
 from dotenv import load_dotenv
-from langchain_openai import ChatOpenAI
+from langchain_groq import ChatGroq
 from langchain_core.messages import HumanMessage
 from main import app  # Import compiled LangGraph loop
 
@@ -13,7 +13,7 @@ from main import app  # Import compiled LangGraph loop
 # ==========================================
 load_dotenv()
 
-judge_llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
+judge_llm = ChatGroq(model="qwen/qwen3-32b", temperature=0)
 
 latencies = []
 escalation_count = 0
