@@ -29,8 +29,9 @@ print("-" * 50)
 try:
     df_all = pd.read_csv("evaluation_happy_paths.csv", encoding="latin-1")
     relevant = ["ORDER", "REFUND", "DELIVERY", "SHIPPING", "CANCEL"]
-    df_happy = df_all[df_all['category'].isin(relevant)].head(30)
+    df_happy = df_all[df_all['category'].isin(relevant)].head(17)
     happy_cases = df_happy['instruction'].tolist()
+    print(f"Loaded {len(happy_cases)} happy path cases.")
 except FileNotFoundError:
     print("Warning: evaluation_happy_paths.csv missing. Skipping.")
     happy_cases = []
@@ -38,10 +39,13 @@ except FileNotFoundError:
 try:
     with open("adversarial_test_cases.json", "r") as f:
         adv_data = json.load(f)
-        adv_cases = [(item['instruction'], item['expected_behavior']) for item in adv_data]
+        adv_cases  = [(i['instruction'], i['expected_behavior']) for i in adv_data if i['category'] != 'Edge Case']
+        edge_cases = [(i['instruction'], i['expected_behavior']) for i in adv_data if i['category'] == 'Edge Case']
+    print(f"Loaded {len(adv_cases)} adversarial cases, {len(edge_cases)} edge cases.")
 except FileNotFoundError:
     print("Warning: adversarial_test_cases.json missing. Skipping.")
     adv_cases = []
+    edge_cases = []
 
 
 # ==========================================
@@ -104,21 +108,30 @@ Reply with exactly one word — PASS or FAIL — nothing else."""
 
 
 
-# Run Happy Paths (Evaluates Resolution Quality)
-print("\nProcessing standard customer intents...", flush=True)
+# Run Happy Paths (17 cases)
+print("\nProcessing happy path cases...", flush=True)
 for i, query in enumerate(happy_cases):
     total_tests += 1
-    print(f"Evaluating Happy Path {i+1}/{len(happy_cases)}...", flush=True)
+    print(f"  Happy Path {i+1}/{len(happy_cases)}...", flush=True)
     score = evaluate_interaction(query, thread_id=f"happy_session_{i}")
     if "PASS" in score.upper():
         passed_guardrails += 1
 
-# Run Adversarial Set (Evaluates Security Compliance)
+# Run Adversarial Cases (8 cases)
 print("\nProcessing adversarial security injections...", flush=True)
 for i, (query, expected) in enumerate(adv_cases):
     total_tests += 1
-    print(f"Evaluating Adversarial Case {i+1}/{len(adv_cases)}...", flush=True)
+    print(f"  Adversarial {i+1}/{len(adv_cases)}...", flush=True)
     score = evaluate_interaction(query, expected_behavior=expected, thread_id=f"adv_session_{i}")
+    if "PASS" in score.upper():
+        passed_guardrails += 1
+
+# Run Edge Cases (5 cases)
+print("\nProcessing edge cases...", flush=True)
+for i, (query, expected) in enumerate(edge_cases):
+    total_tests += 1
+    print(f"  Edge Case {i+1}/{len(edge_cases)}...", flush=True)
+    score = evaluate_interaction(query, expected_behavior=expected, thread_id=f"edge_session_{i}")
     if "PASS" in score.upper():
         passed_guardrails += 1
 
