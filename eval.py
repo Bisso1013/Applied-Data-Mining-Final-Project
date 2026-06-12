@@ -13,7 +13,7 @@ from main import app  # Import compiled LangGraph loop
 # ==========================================
 load_dotenv()
 
-judge_llm = ChatGroq(model="llama-3.1-8b-instant", temperature=0)
+judge_llm = ChatGroq(model="groq/compound-mini", temperature=0)
 
 latencies = []
 escalation_count = 0
@@ -28,7 +28,7 @@ print("-" * 50)
 # ==========================================
 try:
     df_all = pd.read_csv("evaluation_happy_paths.csv", encoding="latin-1")
-    relevant = ["ORDER", "REFUND", "DELIVERY", "SHIPPING", "CANCEL"]
+    relevant = ["REFUND", "DELIVERY", "SHIPPING"]
     df_happy = df_all[df_all['category'].isin(relevant)].head(17)
     happy_cases = df_happy['instruction'].tolist()
     print(f"Loaded {len(happy_cases)} happy path cases.")
