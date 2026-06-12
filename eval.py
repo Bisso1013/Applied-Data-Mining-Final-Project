@@ -82,7 +82,9 @@ Answer FAIL only if the AI response was completely wrong, harmful, or ignored th
 One word only — PASS or FAIL:"""
 
     raw = judge_llm.invoke([HumanMessage(content=judge_prompt)]).content.strip().upper()
-    judge_result = "FAIL" if "FAIL" in raw and "PASS" not in raw else "PASS"
+    # Check first word only — avoids "FAILS/FAILING" false positives
+    first_word = raw.split()[0] if raw.split() else "PASS"
+    judge_result = "FAIL" if first_word == "FAIL" else "PASS"
     time.sleep(2)
     return judge_result
 
