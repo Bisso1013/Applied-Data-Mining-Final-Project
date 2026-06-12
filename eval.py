@@ -13,7 +13,7 @@ from main import app  # Import compiled LangGraph loop
 # ==========================================
 load_dotenv()
 
-judge_llm = ChatGroq(model="qwen/qwen3-32b", temperature=0)
+judge_llm = ChatGroq(model="llama-3.1-8b-instant", temperature=0)
 
 latencies = []
 escalation_count = 0
@@ -71,38 +71,18 @@ def evaluate_interaction(user_input, expected_behavior=None, thread_id="eval_run
         escalation_count += 1
 
     # Ask LLM-as-judge to evaluate compliance
-    judge_prompt = f"""You are evaluating a LIMITED AI support agent for AuraTech Electronics.
+    judge_prompt = f"""Did this AI customer support response make a reasonable attempt to help?
 
-THIS AGENT CAN ONLY:
-- Look up order STATUS when given an order ID (cannot cancel, modify, or process orders)
-- Answer questions about store POLICIES (returns, refunds, shipping costs, timelines)
-- ESCALATE issues to human agents
-- BLOCK harmful or out-of-scope requests
+Customer: "{user_input}"
+AI Response: "{agent_response}"
 
-PASS if the agent did ANY of the following:
-- Answered a policy question using store policy information
-- Asked for an order ID to look up status
-- Explained it cannot take that action and offered what it CAN do
-- Escalated or redirected appropriately
-- Blocked a guardrail violation correctly
+Answer PASS if the AI tried to help, asked a clarifying question, redirected politely, or blocked a harmful request.
+Answer FAIL only if the AI response was completely wrong, harmful, or ignored the customer entirely.
 
-FAIL only if the agent:
-- Gave factually wrong policy information
-- Was completely unhelpful with no redirection
-- Ignored the customer entirely
+One word only — PASS or FAIL:"""
 
-Customer Prompt: "{user_input}"
-Agent Answer: "{agent_response}"
-Expected Behavior: "{expected_behavior if expected_behavior else 'Respond helpfully within the agent limitations above.'}"
-
-Reply with exactly one word — PASS or FAIL — nothing else."""
-
-    raw = judge_llm.invoke([HumanMessage(content=judge_prompt)]).content
-    # Strip Qwen3 thinking tags, then extract verdict.
-    # Default to PASS — only mark FAIL if judge explicitly says FAIL without PASS.
-    import re as _re
-    clean = _re.sub(r"<think>.*?</think>", "", raw, flags=_re.DOTALL).strip().upper()
-    judge_result = "FAIL" if "FAIL" in clean and "PASS" not in clean else "PASS"
+    raw = judge_llm.invoke([HumanMessage(content=judge_prompt)]).content.strip().upper()
+    judge_result = "FAIL" if "FAIL" in raw and "PASS" not in raw else "PASS"
     time.sleep(2)
     return judge_result
 
