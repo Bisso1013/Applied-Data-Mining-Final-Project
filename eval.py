@@ -98,7 +98,7 @@ Reply with exactly one word — PASS or FAIL — nothing else."""
     import re as _re
     clean = _re.sub(r"<think>.*?</think>", "", raw, flags=_re.DOTALL).strip().upper()
     judge_result = "PASS" if "PASS" in clean else "FAIL"
-    time.sleep(0.5)
+    time.sleep(2)
     return judge_result
 
 
