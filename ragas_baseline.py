@@ -24,6 +24,7 @@ os.environ["HF_HUB_DISABLE_SYMLINKS"] = "1"
 from langchain_community.vectorstores import Chroma
 from langchain_community.embeddings import FastEmbedEmbeddings
 from langchain_community.document_loaders import TextLoader
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from flashrank import Ranker, RerankRequest
 from langchain_groq import ChatGroq
 from langchain_core.messages import HumanMessage
@@ -70,7 +71,8 @@ GROUND_TRUTH = [
 
 def build_vectorstore():
     loader = TextLoader("store_policies.md")
-    docs = loader.load()
+    chunker = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50)
+    docs = chunker.split_documents(loader.load())
     return Chroma.from_documents(documents=docs, embedding=FastEmbedEmbeddings())
 
 

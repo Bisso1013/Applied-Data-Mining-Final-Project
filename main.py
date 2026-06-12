@@ -16,6 +16,7 @@ from langchain_groq import ChatGroq
 from langchain_community.document_loaders import TextLoader
 from langchain_community.embeddings import FastEmbedEmbeddings
 from langchain_community.vectorstores import Chroma
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from flashrank import Ranker, RerankRequest
 from langgraph.graph import StateGraph, START, END
 from langgraph.graph.message import add_messages
@@ -27,14 +28,23 @@ llm = ChatGroq(model="llama-3.3-70b-versatile", temperature=0)
 
 
 # ==========================================
-# 0. ADVANCED RAG: Multi-Source Knowledge Base
+# 0. ADVANCED RAG PIPELINE
+# Step 1 — CHUNKER
+# Step 2 — EMBEDDER
+# Step 3 — RETRIEVER (naive) + RERANKER (advanced)
 # ==========================================
 
-# Source 1: Store policies (returns, shipping, FAQ)
-loader = TextLoader("store_policies.md")
-policy_docs = loader.load()
+# STEP 1: CHUNKER — RecursiveCharacterTextSplitter
+# Splits on paragraphs → sentences → words. chunk_size=500 keeps each
+# chunk focused on one policy topic; overlap=50 preserves context across boundaries.
+chunker = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50)
 
-# Source 2: Flipkart product catalog (product knowledge base, top 200 rows)
+# Source 1: Store policies (returns, shipping, FAQ) — chunked
+loader = TextLoader("store_policies.md")
+policy_docs = chunker.split_documents(loader.load())
+print(f"[RAG] Policy chunks: {len(policy_docs)}")
+
+# Source 2: Flipkart product catalog — each row is already a focused chunk
 catalog_docs = []
 try:
     df = pd.read_csv("flipkart_catalog.csv", encoding="latin-1").head(200)
@@ -48,30 +58,35 @@ try:
                 page_content=f"Product: {name}. Brand: {brand}. Price: {price}. {details}",
                 metadata={"source": "catalog"}
             ))
+    print(f"[RAG] Catalog chunks: {len(catalog_docs)}")
 except Exception as e:
     print(f"Warning: could not load product catalog: {e}")
 
 all_docs = policy_docs + catalog_docs
 
-vectorstore = Chroma.from_documents(
-    documents=all_docs,
-    embedding=FastEmbedEmbeddings()
-)
+# STEP 2: EMBEDDER — FastEmbedEmbeddings (BAAI/bge-small-en-v1.5, runs locally, no API key)
+# Chosen for: zero cost, no external API dependency, competitive retrieval quality.
+embedder = FastEmbedEmbeddings()
+vectorstore = Chroma.from_documents(documents=all_docs, embedding=embedder)
+print(f"[RAG] Vectorstore built: {len(all_docs)} total chunks indexed.")
 
-# Naive retriever — used directly and as base for reranking
+# STEP 3a: RETRIEVER (Baseline) — naive cosine similarity, k=5
 naive_retriever = vectorstore.as_retriever(search_kwargs={"k": 5})
 
-# FlashrankRerank cross-encoder — initialized once at startup
+# STEP 3b: RERANKER (Advanced) — FlashrankRerank cross-encoder (ms-marco-MiniLM-L-12-v2)
+# Chosen over hybrid search: policy docs are text-only (no structured metadata for filtering);
+# cross-encoder reranking improves precision by re-scoring all k=5 candidates with a
+# dedicated relevance model, reducing noise before the LLM sees the context.
 _ranker = Ranker()
 
 def rerank(query: str, docs: list, top_n: int = 3) -> list:
-    """Rerank retrieved docs with FlashrankRerank cross-encoder, return top_n."""
+    """Re-score k=5 candidates with cross-encoder, return top_n most relevant."""
     passages = [{"id": i, "text": doc.page_content} for i, doc in enumerate(docs)]
     results = _ranker.rerank(RerankRequest(query=query, passages=passages))
     top_ids = [r["id"] for r in results[:top_n]]
     return [docs[i] for i in top_ids]
 
-print("[RAG] FlashrankRerank cross-encoder initialized.")
+print("[RAG] Advanced retriever (FlashrankRerank cross-encoder) ready.")
 
 
 # ==========================================
