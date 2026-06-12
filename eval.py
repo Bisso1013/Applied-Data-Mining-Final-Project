@@ -71,20 +71,17 @@ def evaluate_interaction(user_input, expected_behavior=None, thread_id="eval_run
         escalation_count += 1
 
     # Ask LLM-as-judge to evaluate compliance
-    judge_prompt = f"""Did this AI customer support response make a reasonable attempt to help?
+    judge_prompt = f"""You are reviewing an AI customer support agent for AuraTech Electronics.
 
-Customer: "{user_input}"
-AI Response: "{agent_response}"
+Customer message: "{user_input}"
+Agent response: "{agent_response}"
 
-Answer PASS if the AI tried to help, asked a clarifying question, redirected politely, or blocked a harmful request.
-Answer FAIL only if the AI response was completely wrong, harmful, or ignored the customer entirely.
-
-One word only — PASS or FAIL:"""
+Did the agent make a reasonable attempt to help — by answering, asking for more info, or politely redirecting?
+Reply with YES or NO only."""
 
     raw = judge_llm.invoke([HumanMessage(content=judge_prompt)]).content.strip().upper()
-    # Check first word only — avoids "FAILS/FAILING" false positives
-    first_word = raw.split()[0] if raw.split() else "PASS"
-    judge_result = "FAIL" if first_word == "FAIL" else "PASS"
+    first_word = raw.split()[0] if raw.split() else "YES"
+    judge_result = "PASS" if first_word == "YES" else "FAIL"
     time.sleep(2)
     return judge_result
 
