@@ -5,7 +5,10 @@ __pycache__/
 .idea/
 .chroma/
 *.db
+*.db-shm
+*.db-wal
 chat_sessions.json
+eval_results.json
 .claude/
 ragas_results.json
 *.egg-info/

@@ -19,6 +19,7 @@ latencies = []
 escalation_count = 0
 total_tests = 0
 passed_guardrails = 0
+all_results = []  # stores per-case detail for dashboard
 
 print("Starting Groq-Powered LLM-as-Judge Evaluation Suite...")
 print("-" * 50)
@@ -51,7 +52,7 @@ except FileNotFoundError:
 # ==========================================
 # 3. INTERACTION EVALUATION LOGIC
 # ==========================================
-def evaluate_interaction(user_input, expected_behavior=None, thread_id="eval_run"):
+def evaluate_interaction(user_input, expected_behavior=None, thread_id="eval_run", case_type="Happy Path", case_id=""):
     global escalation_count
 
     start_time = time.time()
@@ -67,7 +68,8 @@ def evaluate_interaction(user_input, expected_behavior=None, thread_id="eval_run
     latency = end_time - start_time
     latencies.append(latency)
 
-    if "ESCALATION TICKET CREATED" in agent_response:
+    escalated = "ESCALATION TICKET CREATED" in agent_response
+    if escalated:
         escalation_count += 1
 
     # Ask LLM-as-judge to evaluate compliance
@@ -82,6 +84,18 @@ Reply with YES or NO only."""
     raw = judge_llm.invoke([HumanMessage(content=judge_prompt)]).content.strip().upper()
     first_word = raw.split()[0] if raw.split() else "YES"
     judge_result = "PASS" if first_word == "YES" else "FAIL"
+
+    all_results.append({
+        "id": case_id,
+        "type": case_type,
+        "input": user_input,
+        "response": agent_response,
+        "expected": expected_behavior or "",
+        "result": judge_result,
+        "latency": round(latency, 3),
+        "escalated": escalated,
+    })
+
     time.sleep(2)
     return judge_result
 
@@ -92,7 +106,7 @@ print("\nProcessing happy path cases...", flush=True)
 for i, query in enumerate(happy_cases):
     total_tests += 1
     print(f"  Happy Path {i+1}/{len(happy_cases)}...", flush=True)
-    score = evaluate_interaction(query, thread_id=f"happy_session_{i}")
+    score = evaluate_interaction(query, thread_id=f"happy_session_{i}", case_type="Happy Path", case_id=f"HP-{i+1:02d}")
     if "PASS" in score.upper():
         passed_guardrails += 1
 
@@ -101,7 +115,7 @@ print("\nProcessing adversarial security injections...", flush=True)
 for i, (query, expected) in enumerate(adv_cases):
     total_tests += 1
     print(f"  Adversarial {i+1}/{len(adv_cases)}...", flush=True)
-    score = evaluate_interaction(query, expected_behavior=expected, thread_id=f"adv_session_{i}")
+    score = evaluate_interaction(query, expected_behavior=expected, thread_id=f"adv_session_{i}", case_type="Adversarial", case_id=f"ADV-{i+1:02d}")
     if "PASS" in score.upper():
         passed_guardrails += 1
 
@@ -110,7 +124,7 @@ print("\nProcessing edge cases...", flush=True)
 for i, (query, expected) in enumerate(edge_cases):
     total_tests += 1
     print(f"  Edge Case {i+1}/{len(edge_cases)}...", flush=True)
-    score = evaluate_interaction(query, expected_behavior=expected, thread_id=f"edge_session_{i}")
+    score = evaluate_interaction(query, expected_behavior=expected, thread_id=f"edge_session_{i}", case_type="Edge Case", case_id=f"EC-{i+1:02d}")
     if "PASS" in score.upper():
         passed_guardrails += 1
 
@@ -133,3 +147,19 @@ if total_tests > 0:
     print(f" P95 Pipeline Latency    : {p95_latency:.2f} seconds")  #
     print("=" * 50)
     print("\nExtract these metrics to populate your Written Report's data tables.")
+
+    # Save detailed results for the Streamlit dashboard
+    output = {
+        "summary": {
+            "total": total_tests,
+            "escalations": escalation_count,
+            "passed": passed_guardrails,
+            "resolution_rate": round(resolution_rate, 1),
+            "compliance_rate": round(compliance_rate, 1),
+            "p95_latency": round(p95_latency, 3),
+        },
+        "cases": all_results,
+    }
+    with open("eval_results.json", "w") as f:
+        json.dump(output, f, indent=2)
+    print("Saved detailed results to eval_results.json (view with: streamlit run dashboard.py)")
