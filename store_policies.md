@@ -17,7 +17,7 @@ Return Window: Customers can return unused items in their original packaging wit
 
 Exceptions: Software purchases, gift cards, and opened headphones cannot be returned due to hygiene and licensing restrictions.
 
-Restocking Fee: A 10% restocking fee applies to all returned laptops and desktop computers unless the item arrived defective.
+Restocking Fee: A 10% restocking fee applies to all returned laptops, desktop computers, monitors, televisions, refrigerators, washing machines, and smartwatches unless the item arrived defective. Mobile phones are subject to a 15% restocking fee if returned after being activated.
 
 Refund Processing: Once a return is received and inspected, refunds are processed within 3-5 business days to the original payment method.
 
