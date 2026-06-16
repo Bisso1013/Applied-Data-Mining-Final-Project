@@ -111,8 +111,7 @@ class AgentState(TypedDict):
 def order_lookup_agent(state: AgentState):
     """Hits the mock JSON API to look up order status."""
     messages = state['messages']
-    recent = messages[-3:]
-    recent_text = " ".join(m.content for m in recent if hasattr(m, 'content'))
+    recent_text = " ".join(m.content for m in messages if hasattr(m, 'content'))
     order_id_match = UUID_RE.search(recent_text)
 
     if not order_id_match:
