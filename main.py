@@ -1,4 +1,5 @@
 import os
+import glob
 import json
 import re
 import sqlite3
@@ -44,23 +45,29 @@ loader = TextLoader("store_policies.md")
 policy_docs = chunker.split_documents(loader.load())
 print(f"[RAG] Policy chunks: {len(policy_docs)}")
 
-# Source 2: Flipkart product catalog — each row is already a focused chunk
+# Source 2: Flipkart product catalogs — one file per category, 100 rows each
 catalog_docs = []
-try:
-    df = pd.read_csv("flipkart_catalog.csv", encoding="latin-1").head(200)
-    for _, row in df.iterrows():
-        name = str(row.get("Name", "Unknown"))
-        details = str(row.get("Details", ""))[:400]
-        brand = str(row.get("Brand", ""))
-        price = str(row.get("Selling Price", ""))
-        if name and name != "nan":
-            catalog_docs.append(Document(
-                page_content=f"Product: {name}. Brand: {brand}. Price: {price}. {details}",
-                metadata={"source": "catalog"}
-            ))
-    print(f"[RAG] Catalog chunks: {len(catalog_docs)}")
-except Exception as e:
-    print(f"Warning: could not load product catalog: {e}")
+catalog_files = sorted(glob.glob("flipkart_*.csv"))
+for csv_path in catalog_files:
+    try:
+        df = pd.read_csv(csv_path, encoding="latin-1").head(100)
+        category = os.path.splitext(os.path.basename(csv_path))[0].replace("flipkart_", "")
+        count = 0
+        for _, row in df.iterrows():
+            name = str(row.get("Name", "Unknown"))
+            details = str(row.get("Details", ""))[:400]
+            brand = str(row.get("Brand", ""))
+            price = str(row.get("Selling Price", ""))
+            if name and name != "nan":
+                catalog_docs.append(Document(
+                    page_content=f"Product: {name}. Brand: {brand}. Price: {price}. {details}",
+                    metadata={"source": "catalog", "category": category}
+                ))
+                count += 1
+        print(f"[RAG] {csv_path}: {count} chunks loaded")
+    except Exception as e:
+        print(f"Warning: could not load {csv_path}: {e}")
+print(f"[RAG] Total catalog chunks: {len(catalog_docs)}")
 
 all_docs = policy_docs + catalog_docs
 

@@ -31,7 +31,7 @@
 
 | Dataset | Source | How Used |
 |---|---|---|
-| **Flipkart Product Dataset** | Kaggle (`flipkart_products_dataset`) | Top 200 rows indexed as product knowledge base in ChromaDB. Columns used: Name, Brand, Selling Price, Details. Provides product-level RAG context for customer queries about specific items. |
+| **Flipkart Product Datasets** | Kaggle (`flipkart_products_dataset`) | Six category-specific CSVs indexed into ChromaDB: Laptops (414 rows), Mobiles (504), Refrigerators (432), Smart Watches (318), TVs (455), Washing Machines (402). Top 100 rows per category loaded. Columns used: Name, Brand, Selling Price, Details. Provides product-level RAG context for customer queries about specific items. |
 | **AuraTech Store Policies** (`store_policies.md`) | LLM-generated (fictional store) | Primary policy knowledge base for RAG. Covers return windows, restocking fees, refund timelines, shipping costs, and exceptions. Ground truth was known, making RAGAS evaluation more meaningful. |
 | **Bitext Customer Support LLM Dataset** | Hugging Face (`bitext/Bitext-customer-support-llm-chatbot-training-dataset`) | 26,872 real customer support intent/response pairs used as the happy-path evaluation set in `eval.py`. Covers order tracking, returns, billing, and delivery intents. |
 | **Synthetic Order Records** (`mock_orders.json`) | Generated via Python script (`generate_orders.py`) | 200 synthetic orders covering delivered, in-transit, delayed, returned, and cancelled statuses. Used as the mock API backend for the Order Lookup Agent. |

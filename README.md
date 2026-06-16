@@ -51,7 +51,12 @@ User Message
 ├── index.html                 # Custom chat UI (HTML/CSS/JS)
 ├── store_policies.md          # RAG knowledge base (returns, shipping, FAQ)
 ├── mock_orders.json           # Synthetic order database (mock API)
-├── flipkart_catalog.csv       # Product catalog (indexed into RAG)
+├── flipkart_Laptops.csv       # Product catalogs by category (all indexed into RAG)
+├── flipkart_mobiles.csv
+├── flipkart_refrigerator.csv
+├── flipkart_smart_watch.csv
+├── flipkart_tv.csv
+├── flipkart_washing_machine.csv
 ├── eval.py                    # Evaluation suite (LLM-as-judge + metrics)
 ├── ragas_baseline.py          # RAGAS baseline vs. advanced comparison
 ├── dashboard.py               # Streamlit evaluation dashboard
