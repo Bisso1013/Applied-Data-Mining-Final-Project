@@ -219,6 +219,8 @@ def supervisor_router(state: AgentState) -> Literal[
         "idiot", "stupid", "moron", "useless", "garbage", "trash",
         "hate you", "hate this", "worst company", "terrible service",
         "incompetent", "disgrace", "thieves",
+        "fuck", "shit", "damn", "go to hell", "screw you",
+        "bullshit", "crap", "ass", "bastard", "hell with you",
     ]
     if any(kw in last_message for kw in toxic_keywords):
         print("\n[GUARDRAIL CLASS 2 — Toxicity Guardrail Triggered]")
